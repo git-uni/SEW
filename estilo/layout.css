@@ -22,7 +22,7 @@ header nav {
 /*Especificidad: 003*/
 header nav a{
     align-self: center;
-    margin: 1em;
+    margin: 0.6em;
 }
 
 header h1{
