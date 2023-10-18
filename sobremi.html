@@ -4,158 +4,238 @@
 <head>
  <!-- Datos que describen el documento -->
  <meta charset="UTF-8"  />
- <title>Sobre mi</title>
+ <title>EscritorioVirtual:Sobre mi</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="EscritorioVirtual:Sobre mi" />
+ <meta name ="description" content ="Informacion personal sobre Daniel Uría Edroso" />
  <meta name ="keywords" content ="Informacion" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
- <link rel="stylesheet" type="text/css" href="/estilo/estilo.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <link rel="icon" href="multimedia/imagenes/favicon.ico" />
+ <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
  
  </head>
 <body>
- <!-- Datos con el contenido que aparece en el navegador -->
-  <nav>
-	<a href="index.html" accesskey="I" tabindex="1"> Indice </a>
-	<a href="sobremi.html" accesskey="S" tabindex="2"> Sobre mi </a>
-	<a href="noticias.html" accesskey="N" tabindex="3" > Noticias </a>
-	<a href="agenda.html" accesskey="A" tabindex="4"> Agenda </a> 
-	<a href="meteorologia.html" accesskey="M" tabindex="5"> Meteorologia </a>
-	<a href="viajes.html" accesskey="V" tabindex="6"> Viajes </a>
-	<a href="juegos.html" accesskey="J" tabindex="7"> Juegos  </a>
- </nav>
- <h1> Sobre mi </h1>
- <h2> Datos Personales </h2>
- <p>Nombre: Daniel  </p>
- <p>Apellidos: Uria Edroso </p>
- <p>UO: 282813 </p>
- <p>Email: UO282813@uniovi.es </p>
+
+
+ <header>
+	<!-- Datos con el contenido que aparece en el navegador -->
+	<nav>
+		<a href="index.html" accesskey="I" tabindex="1"> Indice </a>
+		<a href="sobremi.html" accesskey="S" tabindex="2"> Sobre mi </a>
+		<a href="noticias.html" accesskey="N" tabindex="3" > Noticias </a>
+		<a href="agenda.html" accesskey="A" tabindex="4"> Agenda </a> 
+		<a href="meteorologia.html" accesskey="M" tabindex="5"> Meteorologia </a>
+		<a href="viajes.html" accesskey="V" tabindex="6"> Viajes </a>
+		<a href="juegos.html" accesskey="J" tabindex="7"> Juegos </a>
+	</nav>
+
+	<h1> EscritorioVirtual </h1>
+	
+ </header>
+
+ <h2> Sobre mi	</h2>
+
  
- <h2> Texto presentación </h2>
- <p> ¡Hola! Soy Daniel Uria Edroso, estudiante de cuarto año de Ingeniería de Software. 
- Apasionado por la tecnología y la programación. ¡Bienvenido a mi mundo digital! </p>
  
- <h2> Lista de aficiones </h2>
- <ul>
-	<li> Música 
+	<article>
+		<h3> Datos Personales </h3>
+		
+		<p>Nombre: Daniel  </p>
+		<p>Apellidos: Uria Edroso </p>
+		<p>UO: 282813 </p>
+		<p>Email: UO282813@uniovi.es </p>
+		<picture>
+			<source srcset="multimedia/imagenes/me_movil.jpg" media="(max-width: 465px)">
+			<source srcset="multimedia/imagenes/me_tablet.jpg" media="(max-width: 799px)">
+			<img src="multimedia/imagenes/me.jpg" alt="Foto en la que aparece Daniel Uría Edroso">
+		</picture>
+	</article>
+
+	<article>
+		<h3> Texto presentación </h3>
+		
+		  <p> ¡Hola! Soy Daniel Uria Edroso, estudiante de cuarto año de Ingeniería de Software. 
+			Apasionado por la tecnología y la programación. ¡Bienvenido a mi mundo digital! </p>	
+		
+		
+	</article>
+
+	<article>
+		<h3> Lista de aficiones </h3>
+		
 		<ul>
-			<li> EDM </li>
-			<li> POP </li>
-			<li> REGGAETON </li>
-		</ul>	
-	</li>
-	<li> Informática 
-		<ul>
-			<li> Desarrollo Web </li>
-			<li> Administracion de Sistemas </li>
+		<li> <h4>Música</h4> 
+			<ul>
+				<li> EDM </li>
+				<li> POP </li>
+				<li> REGGAETON </li>
+			</ul>	
+		</li>
+		<li> <h4>Informática</h4> 
+			<ul>
+				<li> Desarrollo Web </li>
+				<li> Administracion de Sistemas </li>
+			</ul>
+		</li>
+	
+		<li> <h4>Videojuegos</h4> 
+			<ul>
+				<li> MOBAS </li>
+				<li> FPS </li>
+			</ul>
+		</li>
+	
+		<li> <h4>Fiesta</h4> </li>
+		<li> <h4>Coches</h4> </li>
 		</ul>
-	</li>
+	</article>
 
-	<li> Videojuegos 
-		<ul>
-			<li> MOBAS </li>
-			<li> FPS </li>
-		</ul>
-	</li>
+	<article>
+		
+		<h3> Lista de cantantes favoritos </h3>
+		
+		<ol>
+			<li>
+				<a href="https://www.michaeljackson.com/es/"> Michael Jackson</a>
+			</li>
 
-	<li> Fiesta </li>
-	<li> Coches </li>
- </ul>
+			<li>
+				<a href="https://avicii.com/">Avicii</a>
+			</li>
+
+			<li>
+				<a href="https://davidguetta.com/"> David Guetta </a>
+			</li>
+
+			<li>
+				<a href="https://martingarrix.com/"> Martin Garrix </a>
+			</li>
+
+			<li>
+				<a href="https://thewhistlers.es/"> David Whistle </a>
+			</li>
+		</ol>
+
+	</article>
+	
+	<article>
+		<h3> Canciones y Videoclips </h3>
+		
+		<P>Canción Smooth Criminal (Michael Jakcson)</P> 
+		<picture>
+		<source srcset="multimedia/imagenes/caratula_movil.png" media="(max-width: 465px)">
+		<source srcset="multimedia/imagenes/caratula_tablet.png" media="(max-width: 799px)">
+		<img src="multimedia/imagenes/caratula.png" alt="Foto en la que aparece Daniel Uría Edroso">
+	</picture>
+		<p> 
+		<audio controls> 
+			<source src="multimedia/audios/smooth_criminal.mp3" type="audio/mp3"> 
+			<source src="multimedia/audios/smooth_criminal.wav" type="audio/wav"> 
+		</audio> 
+		</p> 
+	
+		<p> Videoclip Wake me up (Avicii) </p>
+		
+		<p> 
+			<video controls preload="auto"> 
+				<source src="multimedia/videos/wake_me_up.mp4" type="video/mp4"> 
+				<source src="multimedia/videos/wake_me_up.webm" type="video/webm"> 
+			</video> 
+		</p>
+	</article>
+
+
+	
+	<article>
+
+		<h3> Asignaturas favoritas del grado </h3>
+
+		<dl>
+		
+			<dt>  Administración de Sistemas y Redes  </dt>
+				<dd> Aprendimos muchas cosas que hasta ese punto no habiamos tocado (configuracion de servidores, operativos, etc...) </dd>
+		
+			<dt>  Software de entretenimiento y videojuegos  </dt>
+				<dd> No esperaba usar Unreal Engine en el grado y lo dimos bastante a fondo </dd>
+		
+			<dt>  Sistemas Operativos  </dt>
+				<dd> Utilizamos un simulador bastante aclarativo para entender los conceptos basicos de un SSOO </dd>
+		
+			<dt>  Estructuras de datos  </dt>
+				<dd> Aprendimos lo esencial sobre EDs y tuve una excelente profesora de laboratorio </dd>
+		
+			<dt>  Sistemas distribuidos e internet  </dt>
+				<dd> Asignatura del segundo semestre del tercer año, enfocada en la parte practica
+				del desarrollo web, Me gusto mucho tanto Spring como Node.js 
+				</dd>
+		
+		</dl>
+
+	</article>
+
+  
+ <article>
+
+	
+	<h3> Temperatura media anual de Oviedo </h3>
+	
+	
+
+	<table>
+		<caption> Tº media anual Oviedo</caption>
+	
+		<tr>
+			<th scope="col" id="año">Año</th>
+			<th scope="col" id="temperatura"> Temperatura(Celsius)</th>
+		</tr>
+		<tr>
+			<th scope="row" id="año2013" headers ="año">2013</th>
+			<td headers="año2013 temperatura"> 12.3</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2014" headers="año">2014</th>
+			<td headers="año2014 temperatura">13.5</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2015" headers="año">2015</th>
+			<td headers= "año2015 temperatura">13.4</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2016" headers="año">2016</th>
+			<td headers="año2016 temperatura">13.2</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2017" headers="año">2017</th>
+			<td headers="año2017 temperatura">13.3</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2018" headers="año">2018</th>
+			<td headers="año2018 temperatura">13.1</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2019" headers="año">2019</th>
+			<td headers="año2019 temperatura">13.2</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2020" headers="año">2020</th>
+			<td headers="año2020 temperatura">13.8</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2021" headers="año">2021</th>
+			<td headers="año2021 temperatura">13.0</td>
+		</tr>
+		<tr>
+			<th scope="row" id="año2022" headers="año">2022</th>
+			<td headers="año2022 temperatura">14.0</td>
+		</tr>
+	  </table>
+ </article>
+
+  
+
  
- <h2> Lista de cantantes favoritos </h2>
-
- <ol>
- 	<li> 
-		<a href="https://www.michaeljackson.com/es/"> Michael Jackson</a>
-		<p> <img src="multimedia/caratula.png" alt="Imagen de la caratula del History Tour de Michael Jackson" /> </p>
-		<p> <audio src="multimedia/smooth_criminal.mp3" controls> </audio> </p> 
- 	</li>
- 
- 	<li> 
-		<a href="https://avicii.com/">Avicii</a>  
-		<p> Videoclip Wake me up </p>
-		<p> <video src="multimedia/wake_me_up.mp4" controls preload="auto"> </video> </p>
-	</li>
- 	<li> David  Guetta </li>
- 	<li> Martin  Garrix </li>
- 	<li> David  Whistle </li>
- </ol>
- 
-  <h2> Asignaturas favoritas del grado </h2>
-  
-  <dl>
-  
-  	<dt>  Administración de Sistemas y Redes  </dt>
-  	<dd> Aprendimos muchas cosas que hasta ese punto no habiamos tocado (configuracion de servidores, operativos, etc...) </dd>
-  
-  	<dt>  Software de entretenimiento y videojuegos  </dt>
-  	<dd> No esperaba usar Unreal Engine en el grado y lo dimos bastante a fondo </dd>
-  
-  	<dt>  Sistemas Operativos  </dt>
-  	<dd> Utilizamos un simulador bastante aclarativo para entender los conceptos basicos de un SSOO </dd>
-  
-  	<dt>  Estructuras de datos  </dt>
-  	<dd> Aprendimos lo esencial sobre EDs y tuve una excelente profesora de laboratorio </dd>
-  
-  	<dt>  Sistemas distribuidos e internet  </dt>
-  	<dd> Me gusto mucho tanto Spring como Node.js </dd>
-  
-  </dl>
-
-  <h2> Temperatura media anual de Oviedo </h2>
-
-  <table>
-	<caption> Tº media anual Oviedo</caption>
-
-	<tr>
-		<td></td>
-		<th> Tº (Celsius)</th>
-	</tr>
-	<tr>
-		<th>2013</th>
-		<td>12.3</td>
-	</tr>
-	<tr>
-		<th>2014</th>
-		<td>13.5</td>
-	</tr>
-	<tr>
-		<th>2015</th>
-		<td>13.4</td>
-	</tr>
-	<tr>
-		<th>2016</th>
-		<td>13.2</td>
-	</tr>
-	<tr>
-		<th>2017</th>
-		<td>13.3</td>
-	</tr>
-	<tr>
-		<th>2018</th>
-		<td>13.1</td>
-	</tr>
-	<tr>
-		<th>2019</th>
-		<td>13.2</td>
-	</tr>
-	<tr>
-		<th>2020</th>
-		<td>13.8</td>
-	</tr>
-	<tr>
-		<th>2021</th>
-		<td>13.0</td>
-	</tr>
-	<tr>
-		<th>2022</th>
-		<td>14.0</td>
-	</tr>
-  </table>
  
 
-<footer>
-
-</footer>
 
 
 </body>

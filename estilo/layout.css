@@ -1,0 +1,42 @@
+/* Daniel Uria Edroso UO282813 */
+
+/*Especificidad: 001*/
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+   
+   
+}
+
+/*Especificidad: 002*/
+header nav {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: 0.2em;
+   justify-content: center;
+}
+
+
+/*Especificidad: 003*/
+header nav a{
+    align-self: center;
+    margin-right: 0.6em;
+}
+
+@media (max-width: 560px) {
+
+    /*Especificidad: 002*/
+    header nav {
+        flex-direction: row;
+    }
+
+    /*Especificidad: 002*/
+    header h1{
+        align-self: center;
+        font-size: 0.8em;
+    }
+}
+
+

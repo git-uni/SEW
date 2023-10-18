@@ -1,1 +1,107 @@
 /* Daniel Uria Edroso UO282813 */
+
+/*Especificidad: 001*/
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/*Especificidad: 001*/
+header{
+    font-style: italic;
+    font-size: 1.2em;
+    background-color: #B6CBE1;
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
+}
+
+/*Especificidad: 001*/
+h2,h3,h4 {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #001F3D;
+    /* Advertencia de color: el elemento hereda la propiedad background-color del elemento body */
+}
+
+/*Especificidad: 013*/
+header nav a:link{
+    /* Advertencia de color: el elemento hereda la propiedad background-color del elemento header */
+    color:#002E8A;
+    text-decoration:none;
+}
+
+/*Especificidad: 013*/
+header nav a:visited{
+    /* Advertencia de color: el elemento hereda la propiedad background-color del elemento header */
+    color:#580085
+}
+
+/*Especificidad: 013*/
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/*Especificidad: 001*/
+ul {
+    list-style-type: circle;
+    font-size: 1.2em;
+}
+
+/*Especificidad: 001*/
+ol {
+    list-style-type: upper-roman;
+    font-size: 1.2em;
+}
+
+/*Especificidad: 002*/
+ul ul{
+    list-style-type: square;
+    font-size: 1em;
+}
+
+/*Especificidad: 013*/
+ul li:nth-child(3) h4{
+    /* Advertencia de color: el elemento hereda la propiedad background-color del elemento body */
+    color: #580085;
+}
+
+/*Especificidad: 002*/
+dl dt{
+    font-weight: bold;
+    font-size: 1.2em;
+    color:#151983;
+    /* Advertencia de color: el elemento hereda la propiedad background-color del elemento body */
+}
+
+/*Especificidad: 002*/
+dl dd{
+    padding:0.8em;
+    margin:0.8em;
+    background-color: #B6CBE1;
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
+}
+
+/*Especificidad: 001*/
+table{
+    border-collapse: collapse;
+}
+
+/*Especificidad: 001*/
+th{
+    background-color:#001F3D ;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding:0.5rem;
+    border: 0.1rem solid #000000;
+    text-align: center;
+}
+
+/*Especificidad: 001*/
+td{
+    background-color:#B6CBE1 ;
+    color: #000000;
+    padding:0.5rem;
+    border: 0.05rem solid #000000;
+    text-align: center;
+    font-size: 1.3rem;
+}
