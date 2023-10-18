@@ -22,7 +22,7 @@ header nav {
 /*Especificidad: 003*/
 header nav a{
     align-self: center;
-    margin: 0.4em;
+    margin: 0.7em;
 }
 
 @media (max-width: 560px) {
