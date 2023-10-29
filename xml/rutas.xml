@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rutas>
+    <ruta> 
+        <nombre>Excursión de un Día a los Acantilados de Moher</nombre>
+        <tipo> Senderismo </tipo>
+        <transporte> A pie  </transporte>
+        <fechaInicio> 25/10/2023 </fechaInicio>
+        <horaInicio> 9:00 </horaInicio>
+        <duracion> 5 horas </duracion>
+        <agencia> IrlandaTravel </agencia>
+        <descripcion> Ruta a pie hasta los acantilados de Moher  </descripcion>
+        <tipoPersona> Mayores de 9 años </tipoPersona>
+        <lugarInicio> Parada de bus Eireann </lugarInicio>
+        <direccionInicio> Ēireann Bus Stop in Cliffs of Moher, Moher Rd, Irlanda </direccionInicio>
+
+        <coordenadas>
+            <longitud>  9.4301    </longitud>
+            <latitud>   52.9711 </latitud>
+            <altitud>   214         </altitud>
+        </coordenadas>
+
+        <referencias>
+            <referencia> https://es.wikipedia.org/wiki/Acantilados_de_Moher </referencia>
+        </referencias>
+
+        <hitos>
+            <nombre> O'Brien's Tower </nombre>
+
+            <coordenadas>
+                <longitud>  9.4304   </longitud>
+                <latitud>   52.9715 </latitud>
+                <altitud>   214        </altitud>
+            </coordenadas>
+
+            <distancia> 2 km </distancia>
+
+            <fotografias> 
+                <foto> oBriensTower.png </foto>
+            </fotografias>
+
+        </hitos>
+    </ruta>
+
+    <ruta> 
+        <nombre>Excursión a la Calzada del Gigante</nombre>
+        <tipo> Senderismo y monumentos </tipo>
+        <transporte> A pie y Tren </transporte>
+        <fechaInicio> 12/11/2023 </fechaInicio>
+        <horaInicio> 9:30 </horaInicio>
+        <duracion> 6 horas </duracion>
+        <agencia> IrlandaAdventure </agencia>
+        <descripcion> Ruta a pie a la Calzada del Gigante, un sitio natural impresionante en la costa norte de Irlanda.  </descripcion>
+        <tipoPersona> Mayores de 8 años </tipoPersona>
+        <lugarInicio> Centro de Visitantes de la Calzada del Gigante </lugarInicio>
+        <direccionInicio> 2 Causeway Rd, Bushmills, Condado de Antrim, Irlanda del Norte </direccionInicio>
+
+        <coordenadas>
+            <longitud>  -6.5143 </longitud>
+            <latitud>   55.2400 </latitud>
+            <altitud>   10      </altitud>
+        </coordenadas>
+
+        <referencias>
+            <referencia> https://es.wikipedia.org/wiki/Calzada_del_Gigante </referencia>
+        </referencias>
+
+        <hitos>
+            <nombre> Formaciones de la Calzada del Gigante </nombre>
+
+            <coordenadas>
+                <longitud>  -6.4164 </longitud>
+                <latitud>   55.2405 </latitud>
+                <altitud>   5       </altitud>
+            </coordenadas>
+
+            <distancia> 3 km </distancia>
+
+            <fotografias> 
+                <foto> calzadaDelGigante.png </foto>
+            </fotografias>
+
+            <videos>
+                <video> calzadaDelGigante.mp4</video>
+            </videos>
+
+        </hitos>
+    </ruta>
+
+    <ruta> 
+        <nombre>Excursión al Parque Nacional de Wicklow</nombre>
+        <tipo> Senderismo, Naturaleza y Monumentos </tipo>
+        <transporte> A pie y Bus </transporte>
+        <fechaInicio> 17/12/2023 </fechaInicio>
+        <horaInicio> 10:00 </horaInicio>
+        <duracion> 4 horas </duracion>
+        <agencia> IrlandaTravel </agencia>
+        <descripcion> Ruta a pie para explorar el hermoso Parque Nacional de Wicklow en el este de Irlanda.  </descripcion>
+        <tipoPersona> Mayores de 12 años </tipoPersona>
+        <lugarInicio> Centro de Visitantes del Parque Nacional de Wicklow </lugarInicio>
+        <direccionInicio> Wicklow Mountains National Park, Greenan, Condado de Wicklow, Irlanda </direccionInicio>
+
+        <coordenadas>
+            <longitud>  -6.2747 </longitud>
+            <latitud>   53.0121 </latitud>
+            <altitud>   150     </altitud>
+        </coordenadas>
+
+        <referencias>
+            <referencia> https://es.wikipedia.org/wiki/Parque_Nacional_de_Wicklow_Mountains </referencia>
+        </referencias>
+
+        <hitos>
+            <nombre> Cascada de Powerscourt </nombre>
+
+            <longitud>  -6.1860 </longitud>
+            <latitud>   53.1847 </latitud>
+            <altitud>   75      </altitud>
+
+            <distancia> 4 km </distancia>
+
+            <fotografias> 
+                <foto> powerscourtCascada.png </foto>
+            </fotografias>
+
+        </hitos>
+    </ruta>
+</rutas>
