@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rutas SYSTEM "rutas.dtd">
-<rutas>
-    <ruta> 
+<rutas 
+    xmlns="http://tempuri.org/rutas"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://tempuri.org/rutas rutas.xsd"
+    >
+	
+    <ruta>  
         <nombre>Excursión de un Día a los Acantilados de Moher</nombre>
         <tipo> Senderismo </tipo>
         <transporte> A pie  </transporte>
-        <fechaInicio> 25/10/2023 </fechaInicio>
-        <horaInicio> 9:00 </horaInicio>
-        <duracion> 5 horas </duracion>
+        <fechaInicio> 2023-10-25 </fechaInicio>
+        <horaInicio> 09:00:00 </horaInicio>
+        <duracion> PT5H </duracion>
         <agencia> IrlandaTravel </agencia>
         <descripcion> Ruta a pie hasta los acantilados de Moher  </descripcion>
         <tipoPersona> Mayores de 9 años </tipoPersona>
@@ -15,9 +19,9 @@
         <direccionInicio> Ēireann Bus Stop in Cliffs of Moher, Moher Rd, Irlanda </direccionInicio>
 
         <coordenadas>
-            <longitud>  9.4301    </longitud>
-            <latitud>   52.9711 </latitud>
-            <altitud>   214         </altitud> 
+            <longitud>-9.4256</longitud>
+            <latitud>52.9703</latitud>
+            <altitud>140</altitud>
         </coordenadas>
 
         <referencias>
@@ -29,13 +33,13 @@
 		<notaRecomendacion> 8 </notaRecomendacion>
 		
         <hitos>
-			<hito>
+			<hito>  
 				<nombre> O'Brien's Tower </nombre>
 
                 <coordenadas>
-                    <longitud>  9.4304   </longitud>
-                    <latitud>   52.9715 </latitud>
-                    <altitud>   214        </altitud>
+                    <longitud>-9.4306</longitud>
+                    <latitud>52.9731</latitud>
+                    <altitud>188</altitud>
                 </coordenadas>
 
                 <distancia unidades="km"> 2  </distancia>
@@ -48,9 +52,9 @@
             <hito>
                 <nombre>Hag's Head</nombre>
                 <coordenadas>
-                    <longitud>-9.4392</longitud>
-                    <latitud>52.9715</latitud>
-                    <altitud>60</altitud>
+                    <longitud>-9.4678</longitud>
+                    <latitud>52.9481</latitud>
+                    <altitud>130</altitud>
                 </coordenadas>
                 <distancia unidades="km">5</distancia>
                 <fotografias>
@@ -61,16 +65,15 @@
             <hito>
                 <nombre>Cliffs View Cafe</nombre>
                 <coordenadas>
-                    <longitud>-9.4458</longitud>
-                    <latitud>52.9734</latitud>
-                    <altitud>0</altitud>
+                    <longitud>-9.4369</longitud>
+                    <latitud>52.9642</latitud>
+                    <altitud>103</altitud>
                 </coordenadas>
                 <distancia unidades="km">8</distancia>
                 <fotografias>
                     <foto>cliffsCafe.png</foto>
                 </fotografias>
             </hito> 
-            
         </hitos>
     </ruta>
 
@@ -78,19 +81,19 @@
         <nombre>Excursión a la Calzada del Gigante</nombre>
         <tipo> Senderismo y monumentos </tipo>
         <transporte> A pie y Tren </transporte>
-        <fechaInicio> 12/11/2023 </fechaInicio>
-        <horaInicio> 9:30 </horaInicio>
-        <duracion> 6 horas </duracion>
+        <fechaInicio> 2023-11-12 </fechaInicio>
+        <horaInicio> 09:30:00 </horaInicio>
+        <duracion> PT6H </duracion>
         <agencia> IrlandaAdventure </agencia>
         <descripcion> Ruta a pie a la Calzada del Gigante, un sitio natural impresionante en la costa norte de Irlanda.  </descripcion>
         <tipoPersona> Mayores de 8 años </tipoPersona>
         <lugarInicio> Centro de Visitantes de la Calzada del Gigante </lugarInicio>
-        <direccionInicio> 2 Causeway Rd, Bushmills, Condado de Antrim, Irlanda del Norte </direccionInicio>
+        <direccionInicio> National Trust - Giant's Causeway Visitor Centre </direccionInicio>
 
         <coordenadas>
-            <longitud>  -6.5143 </longitud>
-            <latitud>   55.2400 </latitud>
-            <altitud>   10      </altitud>
+            <longitud>-6.5114</longitud>
+            <latitud>55.2408</latitud>
+            <altitud>45</altitud>
         </coordenadas>
 
         <referencias>
@@ -103,15 +106,15 @@
 		
         <hitos>
 			<hito>
-				<nombre> Formaciones de la Calzada del Gigante </nombre>
+				<nombre> Giant's Causeway Viewpoint </nombre>
 
 				<coordenadas>
-					<longitud>  -6.4164 </longitud>
-					<latitud>   55.2405 </latitud>
-					<altitud>   5       </altitud>
+					<longitud>-6.5103</longitud>
+					<latitud>55.2389</latitud>
+					<altitud>49</altitud>
 				</coordenadas>
 
-				<distancia unidades="km"> 3  </distancia>
+				<distancia unidades="km"> 5  </distancia>
 
 				<fotografias>
 					<foto> calzadaDelGigante.png </foto>
@@ -125,11 +128,11 @@
             <hito>
                 <nombre>Centro de Visitantes de la Calzada del Gigante</nombre>
                 <coordenadas>
-                    <longitud>-6.4081</longitud>
-                    <latitud>55.2402</latitud>
-                    <altitud>10</altitud>
+                    <longitud>-6.5178</longitud>
+                    <latitud>55.2336</latitud>
+                    <altitud>45</altitud>
                 </coordenadas>
-                <distancia unidades="km">1</distancia>
+                <distancia unidades="km">8</distancia>
                 <fotografias>
                     <foto>centroDeVisitantes.png</foto>
                 </fotografias>
@@ -141,11 +144,11 @@
             <hito>
                 <nombre>Ruta de Senderismo de la Calzada del Gigante</nombre>
                 <coordenadas>
-                    <longitud>-6.4120</longitud>
-                    <latitud>55.2440</latitud>
-                    <altitud>30</altitud>
+                    <longitud>-6.5172</longitud>
+                    <latitud>55.2372</latitud>
+                    <altitud>15</altitud>
                 </coordenadas>
-                <distancia unidades="km">5</distancia>
+                <distancia unidades="km">15</distancia>
                 <fotografias>
                     <foto>rutaDeSenderismo.png</foto>
                 </fotografias>
@@ -161,9 +164,9 @@
         <nombre>Excursión al Parque Nacional de Wicklow</nombre>
         <tipo> Senderismo, Naturaleza y Monumentos </tipo>
         <transporte> A pie y Bus </transporte>
-        <fechaInicio> 17/12/2023 </fechaInicio>
-        <horaInicio> 10:00 </horaInicio>
-        <duracion> 4 horas </duracion>
+        <fechaInicio> 2023-12-17 </fechaInicio>
+        <horaInicio> 10:00:00 </horaInicio>
+        <duracion> PT4H </duracion>
         <agencia> IrlandaTravel </agencia>
         <descripcion> Ruta a pie para explorar el hermoso Parque Nacional de Wicklow en el este de Irlanda.  </descripcion>
         <tipoPersona> Mayores de 12 años </tipoPersona>
@@ -171,9 +174,9 @@
         <direccionInicio> Wicklow Mountains National Park, Greenan, Condado de Wicklow, Irlanda </direccionInicio>
 
         <coordenadas>
-            <longitud>  -6.2747 </longitud>
-            <latitud>   53.0121 </latitud>
-            <altitud>   150     </altitud>
+            <longitud>-6.3108</longitud>
+            <latitud>53.1431</latitud>
+            <altitud>150</altitud>
         </coordenadas>
 
         <referencias>
@@ -188,13 +191,13 @@
 			<hito>
 				 <nombre> Cascada de Powerscourt </nombre>
 				<coordenadas>
-					<longitud>  -6.1860 </longitud>
-					<latitud>   53.1847 </latitud>
-					<altitud>   75      </altitud>
+					<longitud>-6.2111</longitud>
+					<latitud>53.1461</latitud>
+					<altitud>220</altitud>
 				</coordenadas>
 
 
-				<distancia unidades="km"> 4  </distancia>
+				<distancia unidades="km"> 5  </distancia>
 
             <fotografias> 
                 <foto> powerscourtCascada.png </foto>
@@ -204,9 +207,9 @@
             <hito>
                 <nombre>Glendalough Upper Lake</nombre>
                 <coordenadas>
-                    <longitud>-6.3270</longitud>
-                    <latitud>53.0079</latitud>
-                    <altitud>250</altitud>
+                    <longitud>-6.3628</longitud>
+                    <latitud>53.0053</latitud>
+                    <altitud>143</altitud>
                 </coordenadas>
                 <distancia unidades="km">8</distancia>
                 <fotografias>
@@ -217,9 +220,9 @@
             <hito>
                 <nombre>Paseo por el Wicklow Way</nombre>
                 <coordenadas>
-                    <longitud>-6.3305</longitud>
-                    <latitud>53.0863</latitud>
-                    <altitud>50</altitud>
+                    <longitud>-6.2544</longitud>
+                    <latitud>53.0853</latitud>
+                    <altitud>200</altitud>
                 </coordenadas>
                 <distancia unidades="km">12</distancia>
                 <fotografias>

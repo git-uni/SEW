@@ -1,5 +1,6 @@
 <!ELEMENT rutas (ruta+)>
-<!ELEMENT ruta (nombre,tipo,transporte,fechaInicio*,horaInicio*,duracion,agencia,descripcion,tipoPersona,lugarInicio,direccionInicio,coordenadas,referencias,notaRecomendacion,hitos,fotografias,videos)>
+<!ELEMENT ruta (nombre,tipo,transporte,fechaInicio?,horaInicio?,duracion,agencia,descripcion,
+tipoPersona,lugarInicio,direccionInicio,coordenadas,referencias,notaRecomendacion,hitos)>
 
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT tipo (#PCDATA)>
@@ -19,8 +20,14 @@
 
 <!ELEMENT referencias (referencia+)>
 <!ELEMENT referencia (#PCDATA)>
-<!ELEMENT hitos (nombre,coordenadas,distancia,fotografias,videos)>
+
+<!ELEMENT notaRecomendacion (#PCDATA)>
+
+<!ELEMENT hitos (hito+)>
+<!ELEMENT hito (nombre,coordenadas,distancia,fotografias,videos*)>
+
 <!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidades CDATA #REQUIRED>
 
 <!ELEMENT fotografias (foto+)>
 <!ELEMENT foto (#PCDATA)>

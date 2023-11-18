@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+<name>Excursión al Parque Nacional de Wicklow</name>
+<LineString>
+<coordinates>
+-6.2111,53.1461,0.0
+-6.3628,53.0053,0.0
+-6.2544,53.0853,0.0
+</coordinates>
+</LineString>
+<Style> id="lineaRoja">
+<LineStyle>
+<color>#ff0000ff</color>
+<width>5</width>
+</LineStyle>
+</Style>
+<altitudeMode>relativeToGround</altitudeMode>
+</Placemark>
+</Document>
+</kml>

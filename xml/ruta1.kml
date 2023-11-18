@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+<name>Excursión de un Día a los Acantilados de Moher</name>
+<LineString>
+<coordinates>
+-9.4306,52.9731,0.0
+-9.4678,52.9481,0.0
+-9.4369,52.9642,0.0
+</coordinates>
+</LineString>
+<Style> id="lineaRoja">
+<LineStyle>
+<color>#ff0000ff</color>
+<width>5</width>
+</LineStyle>
+</Style>
+<altitudeMode>relativeToGround</altitudeMode>
+</Placemark>
+</Document>
+</kml>

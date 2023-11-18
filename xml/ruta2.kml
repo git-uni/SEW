@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+<name>Excursión a la Calzada del Gigante</name>
+<LineString>
+<coordinates>
+-6.5103,55.2389,0.0
+-6.5178,55.2336,0.0
+-6.5172,55.2372,0.0
+</coordinates>
+</LineString>
+<Style> id="lineaRoja">
+<LineStyle>
+<color>#ff0000ff</color>
+<width>5</width>
+</LineStyle>
+</Style>
+<altitudeMode>relativeToGround</altitudeMode>
+</Placemark>
+</Document>
+</kml>

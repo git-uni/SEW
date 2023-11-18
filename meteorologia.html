@@ -12,10 +12,14 @@
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
+ <script src="js/pais.js"></script>
+
  
  </head>
 <body>
     <header>
+        <h1> EscritorioVirtual </h1>
+        
         <nav>
             <a href="index.html" accesskey="I" tabindex="1"> Indice </a>
             <a href="sobremi.html" accesskey="S" tabindex="2"> Sobre mi </a>
@@ -25,10 +29,30 @@
             <a href="viajes.html" accesskey="V" tabindex="6"> Viajes </a>
             <a href="juegos.html" accesskey="J" tabindex="7"> Juegos </a>
         </nav>
-        <h1> EscritorioVirtual </h1>
+        
     </header>
     <h2> Meteorologia </h2>
- <p> En desarrollo </p> 
+
+    <article>
+
+        <h3> Pais </h3>
+
+        <script>
+                var pais = new Pais("Irlanda","Dublín",4581269);
+                pais.fillSecondaryFields("República Parlamentaria",53.33306,-6.24889,"Cristianismo");
+        
+                document.write("<p>Nombre: " + pais.getNombrePais() + " </p>");
+                document.write("<p>Capital: " + pais.getNombreCapital() + "</p>");
+        
+                document.write( pais.getSecondaryFields());
+        
+                pais.writeCoordinates();
+        </script>
+
+    </article>
+   
+
+    
 
 <footer>
 
