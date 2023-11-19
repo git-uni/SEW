@@ -4,16 +4,16 @@
 <head>
  <!-- Datos que describen el documento -->
  <meta charset="UTF-8"  />
- <title>EscritorioVirtual: Juego de memoria</title>
+ <title>EscritorioVirtual: Sudoku</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="Juego interactivo de memoria usando tarjetas" />
- <meta name ="keywords" content ="Juego, Memoria, Azar" />
+ <meta name ="description" content ="Juego de sudoku interactivo" />
+ <meta name ="keywords" content ="Juego, Interactivo, Sudoku" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
- <link rel="stylesheet" type="text/css" href="estilo/memoria.css"/>
- <script src="js/memoria.js"></script>
+ <link rel="stylesheet" type="text/css" href="estilo/sudoku.css"/>
+ <script src ="js/sudoku.js"></script>
  
  </head>
 <body>
@@ -42,23 +42,31 @@
 </section>
 
 <main>
-    <section>
-        <h3> Juego de memoria</h3>
 
-           
-
-    </section>
 </main>
 
 
 
 
-
-
-
 </body>
-
 <script>
-    var memoria = new Memoria();
-</script> 
+    var sudoku = new Sudoku();
+    sudoku.paintSudoku();
+
+    document.addEventListener("keydown",function(event){
+        var selectedCell = document.querySelector('p[data-state="clicked"]');
+
+        if(selectedCell){
+            var pressedKey = event.key;
+
+            if(!isNaN(pressedKey) && pressedKey >= 1 && pressedKey <= 9){
+                sudoku.introduceNumber(pressedKey);
+            }else{
+                alert('Valor introducido no valido, Por favor introduzca un numero entre 1 y 9');
+            }
+        }else{
+            alert('Por favor seleccione una casilla');
+        }
+    });
+</script>
 </html>
