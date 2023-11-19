@@ -31,6 +31,7 @@ article{
     /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
     transform-style: preserve-3d;
     transition: transform .5s;
+    height: 12em;
 }
 
 /*Especificidad: 002*/
@@ -44,7 +45,8 @@ article h3{
 
 /*Especificidad: 002*/
 article img{
-    width: 65%;
+    width: 7em;
+    height: 7em;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }

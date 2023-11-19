@@ -33,7 +33,7 @@ class Sudoku{
         for (let i = 0; i < this.nRows; i++) {
             for (let j = 0; j < this.nColumns; j++) {
                 var elemento = this.boardArray[i][j];
-                if(elemento == 0){
+                if(parseInt(elemento) == 0){
                     var p = document.createElement("p");
                     p.addEventListener("click", this.setClicked.bind(this,p) );
                     p.setAttribute("row",i);
@@ -70,6 +70,8 @@ class Sudoku{
             selectedCell.setAttribute('data-state', 'correct');
 
             selectedCell.textContent = pressedKey;
+
+            this.boardArray[row][column] = parseInt(pressedKey);
       
             if (this.isSudokuCompleted()) {
               alert('¡Sudoku completado!');
