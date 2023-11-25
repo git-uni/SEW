@@ -90,25 +90,25 @@ class Memoria{
         }
     }
 
-    flipCard(card){
-        if(card.getAttribute("data-state") == "revealed"){
+    flipCard(game){
+        if(this.getAttribute("data-state") == "revealed"){ 
             return;
         }
-        if(this.lockBoard){
+        if(game.lockBoard){ 
             return;
         }
-        if(card === this.firstCard){
+        if(this === game.firstCard){
             return ;
         }
 
-        card.setAttribute('data-state', 'flip');
+        this.setAttribute('data-state', 'flip');
 
-        if(this.hasFlippedCard){
-            this.secondCard = card;
-            this.checkForMatch();
+        if(game.hasFlippedCard){
+            game.secondCard = this;
+            game.checkForMatch();
         }else{
-            this.hasFlippedCard = true;
-            this.firstCard = card;
+            game.hasFlippedCard = true;
+            game.firstCard = this;
 
         }
     }
@@ -117,7 +117,7 @@ class Memoria{
         var cards = document.querySelectorAll("article");
 
         for (var i = 0; i < cards.length; i++) {
-            cards[i].addEventListener("click", this.flipCard.bind(this, cards[i]));
+            cards[i].addEventListener("click", this.flipCard.bind(cards[i],this));
         }
 
     }

@@ -110,3 +110,41 @@ td{
 ol li{
     margin:1.5em;
 }
+
+/*Especificidad:011*/
+section[data-name="meteo"]{
+    display: flex;
+    flex-direction: row;
+    gap:0.09em
+}
+
+/*Especificidad:011*/
+article[data-name="meteo"]{
+    display: flex;
+    flex-direction: column-reverse;
+    border: 0.10em solid #000;
+    background-color:#001F3D ;
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
+    padding: 0;
+}
+
+/*Especificidad:012*/
+article[data-name="meteo"] ul{
+    background-color:#B6CBE1 ;
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
+    list-style: inside;
+    padding: 0.5em;
+    border: 0.05em solid #000;
+    margin: 0;
+  
+}
+
+
+@media (max-width: 560px) {
+
+    /*Especificidad:013*/
+article[data-name="meteo"] ul li{
+    font-size: 0.6em;
+}
+}
+

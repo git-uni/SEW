@@ -6,12 +6,17 @@
  <meta charset="UTF-8"  />
  <title>EscritorioVirtual: Agenda</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="Agenda" />
+ <meta name ="description" content ="Agenda de formula 1 de las carreras de esta temporada" />
  <meta name ="keywords" content ="Agenda,Planificacion" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
+ <link rel="stylesheet" type="text/css" href="estilo/agenda.css"/>
+ <script src ="js/agenda.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
  
  </head>
 <body>
@@ -32,11 +37,19 @@
 
  <h2> Agenda </h2>
 
- <p> En desarrollo </p> 
+ <button> Solicitar información</button>
 
-<footer>
+<article>
+    <h3> Formula 1: Temporada en curso</h3>
 
-</footer>
+</article>
+
+<script>
+    
+    var agenda = new Agenda();
+    
+    document.querySelector("button").setAttribute("onclick","agenda.consultRaces()"); 
+</script>
 
 
 </body>
