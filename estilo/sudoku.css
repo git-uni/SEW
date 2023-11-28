@@ -41,7 +41,7 @@ p[data-state="blocked"] {
   }  
 
   p[data-state="clicked"] {
-    background-color: #33FFDD;
+    background-color: #B6CBE1 ;;
   }   
 
  /*Especificidad:011*/
