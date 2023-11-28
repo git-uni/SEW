@@ -92,7 +92,7 @@ class Crucigrama{
         return formattedDifference;
     }
 
-    introduceNumber(pressedKey){
+    introduceElement(pressedKey){
         var expression_row = true;
         var expression_col = true;
 

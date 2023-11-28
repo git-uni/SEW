@@ -56,7 +56,14 @@ class Sudoku{
     }
 
     setClicked(p){
-        p.setAttribute("data-state","clicked");
+
+      var allClicked = document.querySelectorAll('p[data-state="clicked"]');
+      
+      allClicked.forEach(function(element) {
+        element.setAttribute('data-state', '');
+      });
+
+      p.setAttribute("data-state","clicked");
     }
 
     introduceNumber(pressedKey){
@@ -76,6 +83,8 @@ class Sudoku{
             if (this.isSudokuCompleted()) {
               alert('¡Sudoku completado!');
             }
+          }else{
+            alert("El numero introducido no es valido para esta casilla")
           } 
     }
 

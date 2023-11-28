@@ -35,7 +35,52 @@ main p:nth-child(n+46):nth-child(-n+54){
     border-bottom: 0.1em solid #000;
 }
 
-/*Especificidad: 011*/
+/*Especificidad: 011*/  
 p[data-state="blocked"] {
     background-color: #FFFF; 
   }  
+
+  p[data-state="clicked"] {
+    background-color: #33FFDD;
+  }   
+
+ /*Especificidad:011*/
+ section[data-type=botonera] {
+    visibility: hidden;
+}
+/*Especificidad:012*/
+section[data-type=botonera] h2 {
+  visibility: hidden;
+}
+/*Especificidad:012*/
+section[data-type=botonera] button {
+  visibility: hidden;
+}
+
+ @media (max-width: 799px) {
+
+  /*Especificidad:011*/
+  section[data-type=botonera] {
+      visibility: visible;
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  /*Especificidad:012*/
+  section[data-type=botonera] h2 {
+      visibility: visible;
+      width: 100%;
+      text-align: center;
+  }
+  /*Especificidad:012*/
+  section[data-type=botonera] button {
+      visibility: visible;
+      width: calc(15% - 1em);
+      height: 4em;
+      text-align: center;
+      background-color: #000;
+      color: #FFF;
+  }
+}  
