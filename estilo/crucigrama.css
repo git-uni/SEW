@@ -1,0 +1,26 @@
+/* Daniel Uria Edroso UO282813 */
+
+/*Especificidad: 001*/
+main{
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   grid-template-rows: repeat(11, 1fr);
+   border: 0.2em solid #000;
+    
+ }
+
+ /*Especificidad: 002*/
+ main p{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   border: 0.05em solid #000;
+   margin:0;
+   height: 3em;
+ }
+
+ /*Especificidad: 011*/
+ p[data-state="empty"]{
+    background-color: #000;
+    margin:0;
+ }

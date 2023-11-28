@@ -6,16 +6,22 @@
  <meta charset="UTF-8"  />
  <title>EscritorioVirtual: Noticias</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="Noticias" />
+ <meta name ="description" content ="Seccion que contiene noticias y permite añadir noticias nuevas" />
  <meta name ="keywords" content ="Noticias,Novedades" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
- 
+ <script src ="js/noticias.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+ <script>
+    var  noticia = new Noticias();
+</script>
+
  </head>
 <body>
-    <<header>
+    <header>
         <h1> EscritorioVirtual </h1>
         
         <nav>
@@ -31,12 +37,15 @@
     </header>
 
     <h2>Noticias</h2>
- <p> En desarrollo </p> 
+ 
+    <p> <input type="file" onchange="noticia.readInputFile(this.files)"> </p>
 
-<footer>
+    <section> 
+        
+    </section>
 
-</footer>
-
-
+   
 </body>
+
+
 </html>

@@ -76,11 +76,8 @@ class Pais{
                     var fecha = $("<li></li>")
                     fecha.text(datosDiarios[i].dt_txt.replace("12:00:00","") )
 
-                //    var tempMax = $("<li></li>")
-                //    tempMax.text("T° máxima: " + maxTemp.toFixed(1) + "°C")
-
-                //    var tempMin = $("<li></li>")
-                //    tempMin.text("T° mínima: " +minTemp.toFixed(1) + "°C")
+               
+               
 
                     var temp = $("<li></li>")
                     temp.text(maxTemp.toFixed(1) +"°/" + minTemp.toFixed(1) + "°")
@@ -97,8 +94,6 @@ class Pais{
                     img.attr("alt",altImagen);
 
                     list.append(fecha)
-                //    list.append(tempMax)
-                //    list.append(tempMin)
                     list.append(temp)
                     list.append(humidity)
 

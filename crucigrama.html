@@ -4,16 +4,18 @@
 <head>
  <!-- Datos que describen el documento -->
  <meta charset="UTF-8"  />
- <title>EscritorioVirtual: Sudoku</title>
+ <title>EscritorioVirtual: Crucigrama</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="Juego de sudoku interactivo" />
- <meta name ="keywords" content ="Juego, Interactivo, Sudoku" />
+ <meta name ="description" content ="Crucigrama matematico interactivo" />
+ <meta name ="keywords" content ="Juego, Crucigrama, Interactivo" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
- <link rel="stylesheet" type="text/css" href="estilo/sudoku.css"/>
- <script src ="js/sudoku.js"></script>
+ <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css"/>
+ <script src="js/crucigrama.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
  
  </head>
 <body>
@@ -34,7 +36,7 @@
 </header>
 
 <section>
-    <h2> Menu de acceso </h2>
+    <h3> Menu de acceso </h3>
 
     <p>  <a href="memoria.html"> Juego de memoria</a>   </p>
     <p>  <a href="sudoku.html"> Sudoku</a>   </p>
@@ -42,29 +44,30 @@
 
 </section>
 
+
 <main>
 
 </main>
 
 
 
-
 </body>
 <script>
-    var sudoku = new Sudoku();
-    sudoku.paintSudoku();
+    var crucigrama = new Crucigrama();
+    crucigrama.paintMathword();
 
     document.addEventListener("keydown",function(event){
-        var selectedCell = document.querySelector('p[data-state="clicked"]');
+        var selectedCell = $('p[data-state="clicked"]');
 
         if(selectedCell){
             var pressedKey = event.key;
 
-            if(!isNaN(pressedKey) && pressedKey >= 1 && pressedKey <= 9){
-                sudoku.introduceNumber(pressedKey);
+            if((pressedKey >= 1 && pressedKey <= 9 ) || pressedKey == "+"
+            || pressedKey == "-" || pressedKey == "*" || pressedKey == "/"){
+                crucigrama.introduceNumber(pressedKey);
                 
             }else{
-                alert('Valor introducido no valido, Por favor introduzca un numero entre 1 y 9');
+                alert('Valor introducido no valido, Por favor introduzca un numero entre 1 y 9 o un operador aritmetico (+,-,*,/)');
             }
         }else{
             alert('Por favor seleccione una casilla');

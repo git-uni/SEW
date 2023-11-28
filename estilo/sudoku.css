@@ -1,15 +1,17 @@
 /* Daniel Uria Edroso UO282813 */
 
+/*Especificidad: 001*/
 main{
    display: grid;
    grid-template-columns: repeat(9, 1fr);
    grid-template-rows: repeat(9, 1fr);
+   border: 0.2em solid #000;
    width: 500px;
    height: 500px;
-   border: 0.2em solid #000;
  
 }
 
+/*Especificidad: 002*/
 main p{
     display: flex;
     align-items: center;
@@ -20,18 +22,20 @@ main p{
     border: 0.05em solid #808080;
 }
 
+/*Especificidad: 012*/
 main p:nth-child(3n){
     border-right: 0.1em solid #000;
 }
-
+/*Especificidad: 022*/
 main p:nth-child(n+19):nth-child(-n+27){
     border-bottom: 0.1em solid #000;
 }
-
+/*Especificidad: 022*/
 main p:nth-child(n+46):nth-child(-n+54){
     border-bottom: 0.1em solid #000;
 }
 
+/*Especificidad: 011*/
 p[data-state="blocked"] {
     background-color: #FFFF; 
   }  

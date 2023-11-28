@@ -115,7 +115,8 @@ ol li{
 section[data-name="meteo"]{
     display: flex;
     flex-direction: row;
-    gap:0.09em
+    gap:0.09em;
+    flex-wrap:	wrap;
 }
 
 /*Especificidad:011*/
