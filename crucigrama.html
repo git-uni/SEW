@@ -66,8 +66,11 @@
             || pressedKey == "-" || pressedKey == "*" || pressedKey == "/"){
                 crucigrama.introduceNumber(pressedKey);
                 
+            }else if(event.shiftKey){
+        
             }else{
                 alert('Valor introducido no valido, Por favor introduzca un numero entre 1 y 9 o un operador aritmetico (+,-,*,/)');
+
             }
         }else{
             alert('Por favor seleccione una casilla');

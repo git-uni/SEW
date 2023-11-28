@@ -7,7 +7,7 @@ class Crucigrama{
         var boards = [boardA, boardB, boardC];
 
         var randomIndex = Math.floor(Math.random() * boards.length);
-        
+
         this.board = boards[randomIndex];
         this.nRows = 11;
         this.nColumns = 9;
@@ -126,10 +126,8 @@ class Crucigrama{
         }
 
         //Vertiente vertical
-        for(var j = row+1; j >= 0 ; j--){
-            if(j >= this.nRows){
-                break;
-            }
+        for(var j = row+1; j < this.nRows ; j++){
+           
             if(parseInt(this.boardArray[j][column]) == -1){
                 break;
             }

@@ -24,3 +24,9 @@ main{
     background-color: #000;
     margin:0;
  }
+
+  /*Especificidad: 011*/
+  p[data-state="clicked"]{
+    background-color: #33FFDD;
+   
+ }
