@@ -68,6 +68,8 @@ class Crucigrama{
     }
 
     setClicked(){
+        var allClicked = $("p[data-state='clicked']").attr("data-state","");
+
         this.attr("data-state","clicked");
     }
 
