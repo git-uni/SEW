@@ -1,8 +1,8 @@
 /* Daniel Uria Edroso UO282813 */
 
-
-canvas{
-    border:solid 0.1em #000;
+/*Especificidad: 001*/
+canvas {
+    border: solid 0.1em #000;
     width: 100%;
     height: 70vh;
 }
@@ -10,57 +10,64 @@ canvas{
 /*Especificidad: 011*/
 button:active {
     transform: scale(1.2);
-  }
+}
 
-button{
-    background-color: #2F4F6F; 
-    color: #FFF; 
+/*Especificidad: 001*/
+button {
+    background-color: #2F4F6F;
+    color: #FFF;
     padding: 0.5em 1em;
-    font-size: 1.2em; 
-    border: none; 
-    border-radius: 0.5em; 
-    margin-bottom:0.3em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    margin-bottom: 0.3em;
 }
 
-button[data-name="red"]{
+/*Especificidad: 011*/
+button[data-name="red"] {
     background-color: #ff0000;
-    color: #FFF; 
+    color: #FFF;
 }
 
-button[data-name="blue"]{
+/*Especificidad: 011*/
+button[data-name="blue"] {
     background-color: #0000FF;
-    color: #FFF; 
+    color: #FFF;
 }
 
-button[data-name="green"]{
+/*Especificidad: 011*/
+button[data-name="green"] {
     background-color: #008000;
-    color: #FFF; 
+    color: #FFF;
 }
 
-button[data-name="yellow"]{
+/*Especificidad: 011*/
+button[data-name="yellow"] {
     background-color: #FFFF00;
-    color: #FFF; 
+    color: #FFF;
 }
 
-button[data-name="black"]{
+/*Especificidad: 011*/
+button[data-name="black"] {
     background-color: #000000;
-    color: #FFF; 
+    color: #FFF;
 }
 
-section article{
+/*Especificidad: 002*/
+section article {
     display: flex;
     flex-flow: row wrap;
 }
 
-section article h3{
+/*Especificidad: 003*/
+section article h3 {
     flex-basis: 100%;
 }
 
-section article button{
+/*Especificidad: 003*/
+section article button {
     flex-basis: 10%;
     height: 10vh;
     margin: 0.2em;
+    margin-bottom: 0.5em;
 }
-
-
-
