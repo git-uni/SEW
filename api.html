@@ -1,0 +1,115 @@
+<!-- Datos Personales : Daniel Uria Edroso UO282813 -->
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>EscritorioVirtual: Canvas Interactivo</title>
+    <meta name="author" content="Daniel Uria" />
+    <meta name="description" content="Canvas interactivo" />
+    <meta name="keywords" content="Plantilla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="icon" href="multimedia/imagenes/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/api.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Datos con el contenido que aparece en el navegador -->
+    <header>
+        <h1> EscritorioVirtual </h1>
+
+        <nav>
+            <a href="index.html" accesskey="I" tabindex="1"> Indice </a>
+            <a href="sobremi.html" accesskey="S" tabindex="2"> Sobre mi </a>
+            <a href="noticias.html" accesskey="N" tabindex="3"> Noticias </a>
+            <a href="agenda.html" accesskey="A" tabindex="4"> Agenda </a>
+            <a href="meteorologia.html" accesskey="M" tabindex="5"> Meteorologia </a>
+            <a href="viajes.php" accesskey="V" tabindex="6"> Viajes </a>
+            <a href="juegos.html" accesskey="J" tabindex="7"> Juegos </a>
+        </nav>
+
+    </header>
+
+    <section>
+        <h2>Canvas interactivo</h2>
+
+        <canvas> </canvas>
+
+        <button>Borrar Canvas</button>
+    </section>
+    <button>Exportar Canvas</button>
+
+
+
+    <script>
+        var canvas = new Canvas();
+        var canvasElement = document.querySelector("canvas");
+
+        //Ajustamos el tamaño del canvas
+        canvasElement.width = canvasElement.offsetWidth;
+        canvasElement.height = canvasElement.offsetHeight;
+
+        
+        canvasElement.addEventListener('mousedown', function (e) { canvas.startPosition(e); })
+        canvasElement.addEventListener('mouseup', function () { canvas.endPosition(); });
+        canvasElement.addEventListener('mousemove', function (e) { canvas.draw(e); })
+        canvasElement.addEventListener('mouseleave', function () { canvas.endPosition(); });
+
+        window.addEventListener('resize', function () {
+            canvasElement.width = canvasElement.offsetWidth;
+            canvasElement.height = canvasElement.offsetHeight;
+        });
+
+
+        canvasElement.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+
+        canvasElement.addEventListener('drop', function (e) {
+            e.preventDefault();
+
+            var file = e.dataTransfer.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    var img = new Image();
+                    img.onload = function () {
+                        canvasElement.getContext("2d").clearRect(0, 0, canvasElement.width, canvasElement.height);
+
+                        canvasElement.getContext("2d").drawImage(img, 0, 0);
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        var exportButton = document.querySelector("body > button");
+        exportButton.addEventListener('click', function () {
+            var dataURL = canvasElement.toDataURL('image/png');
+
+            var a = document.createElement('a');
+            a.href = dataURL;
+            a.download = 'canvas_image.png';
+            a.click();
+        });
+
+        var clearButton = document.querySelector("section > button");
+        clearButton.addEventListener('click', function () {
+            canvasElement.getContext("2d").clearRect(0, 0, canvasElement.width, canvasElement.height);
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

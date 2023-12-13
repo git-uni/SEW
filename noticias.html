@@ -6,18 +6,17 @@
  <meta charset="UTF-8"  />
  <title>EscritorioVirtual: Noticias</title>
  <meta name ="author" content ="Daniel Uria" />
- <meta name ="description" content ="Seccion que contiene noticias y permite añadir noticias nuevas" />
+ <meta name ="description" content ="Pagina que permite parsear noticias y permite añadir noticias nuevas de manera interactiva" />
  <meta name ="keywords" content ="Noticias,Novedades" />
  <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
  <link rel="icon" href="multimedia/imagenes/favicon.ico" />
  <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
+ <link rel="stylesheet" type="text/css" href="estilo/noticias.css"/>
  <script src ="js/noticias.js"></script>
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
- <script>
-    var  noticia = new Noticias();
-</script>
+ 
 
  </head>
 <body>
@@ -30,7 +29,7 @@
             <a href="noticias.html" accesskey="N" tabindex="3" > Noticias </a>
             <a href="agenda.html" accesskey="A" tabindex="4"> Agenda </a> 
             <a href="meteorologia.html" accesskey="M" tabindex="5"> Meteorologia </a>
-            <a href="viajes.html" accesskey="V" tabindex="6"> Viajes </a>
+            <a href="viajes.php" accesskey="V" tabindex="6"> Viajes </a>
             <a href="juegos.html" accesskey="J" tabindex="7"> Juegos </a>
         </nav>
         
@@ -38,13 +37,39 @@
 
     <h2>Noticias</h2>
  
-    <p> <input type="file" onchange="noticia.readInputFile(this.files)"> </p>
+    
 
-    <section> 
+    <section > 
+        <h3> Generación de noticias</h3>
+
+        <p> <input type="file" onchange="noticia.readInputFile(this.files)"> </p>
         
     </section>
 
-   
+
+    <section >
+        <h3> Añadir noticia nueva </h3>
+
+        <textarea  placeholder="Titular"></textarea>
+
+        <textarea  placeholder="Entradilla"></textarea>
+
+        <textarea  placeholder="Texto de la noticia"></textarea>
+
+        <textarea  placeholder="Autor"></textarea>
+
+        <button> Añadir noticia </button>
+    </section>
+    
+    
+
+    <script>
+        var  noticia = new Noticias();
+
+       
+
+        $("button").attr("onclick","noticia.addNewsItem()");
+    </script>  
 </body>
 
 

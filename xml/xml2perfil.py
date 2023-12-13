@@ -30,21 +30,18 @@ for i, ruta in enumerate(rutas):
         altitudes.append(altimetry)
         distancias.append(distance)
 
-    # Ajusta el tamaño y las coordenadas del perfil
-    maxDistance = max(distancias)
-    maxAltitude = max(altitudes)
-    scaleFactor = 800 / maxDistance  # Escala el perfil al ancho de 800 unidades
-    altitudes = [altitude * 400 / maxAltitude for altitude in altitudes]
+
 
     # Crea el contenido del archivo SVG
     svgContent = f'<?xml version="1.0" encoding="UTF-8"?>\n'
-    svgContent += f'<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">\n'
+    svgContent += f'<svg xmlns="http://www.w3.org/2000/svg" width="350" height="300">\n'
     svgContent += f'<polyline points="'
 
     for x, y in zip(distancias, altitudes):
-        svgContent += f'{x * scaleFactor}, {400 - y} '
+        svgContent += f'{x * 12}, { y * 1.3 } '
 
-    svgContent += f'" fill="none" stroke="blue" stroke-width="4" />\n'
+
+    svgContent += f'" fill="red" stroke="blue" stroke-width="4" />\n'
     svgContent += f'</svg>'
 
     # Guarda el contenido en el archivo SVG

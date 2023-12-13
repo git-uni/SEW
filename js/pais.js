@@ -76,9 +76,6 @@ class Pais{
                     var fecha = $("<li></li>")
                     fecha.text(datosDiarios[i].dt_txt.replace("12:00:00","") )
 
-               
-               
-
                     var temp = $("<li></li>")
                     temp.text(maxTemp.toFixed(1) +"°/" + minTemp.toFixed(1) + "°")
 
@@ -103,8 +100,6 @@ class Pais{
                     $("section[data-name='meteo']").append(article);
                 }
 
-            },
-            error:function(){
             }
         })
     }

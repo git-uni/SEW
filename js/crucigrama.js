@@ -6,9 +6,9 @@ class Crucigrama{
         var boardC = "4,.,.,=,36,#,#,#,25,#,#,*,#,.,#,#,#,.,.,-,.,=,.,#,15,#,.,*,#,=,#,=,#,.,#,=,.,#,18,#,6,*,.,=,30,=,#,#,#,#,#,=,#,#,56,#,9,-,.,=,3,#,.,#,#,*,#,+,#,#,#,*,20,.,.,=,18,#,#,#,.,#,#,=,#,=,#,#,#,=,#,#,18,#,24,.,.,=,72";
         var boards = [boardA, boardB, boardC];
 
-        var randomIndex = Math.floor(Math.random() * boards.length);
+        this.randomIndex = Math.floor(Math.random() * boards.length);
 
-        this.board = boards[randomIndex];
+        this.board = boards[this.randomIndex];
         this.nRows = 11;
         this.nColumns = 9;
         this.init_time = null;
@@ -51,8 +51,8 @@ class Crucigrama{
                 if(parseInt(elemento) == 0){
                     var p = $("<p></p>")
                     p.click(this.setClicked.bind(p))
-                    p.attr("row",i)
-                    p.attr("column",j)
+                    p.attr("data-row",i)
+                    p.attr("data-column",j)
                 }else if(elemento == -1){
                     var p = $("<p></p>")
                     p.attr("data-state","empty")
@@ -84,6 +84,9 @@ class Crucigrama{
     calculate_date_difference(){
         var difference = this.end_time - this.init_time;
 
+        this.totalSeconds = Math.floor(difference / 1000); 
+
+
         var hours = Math.floor(difference / 3600000); // 1 hora = 3600000 milisegundos
         var minutes = Math.floor((difference % 3600000) / 60000); // 1 minuto = 60000 milisegundos
         var seconds = Math.floor((difference % 60000) / 1000); // 1 segundo = 1000 milisegundos
@@ -97,8 +100,8 @@ class Crucigrama{
         var expression_col = true;
 
         var selectedCell = $("p[data-state='clicked']");
-        var row = parseInt(selectedCell.attr("row"));
-        var column = parseInt(selectedCell.attr("column"));
+        var row = parseInt(selectedCell.attr("data-row"));
+        var column = parseInt(selectedCell.attr("data-column"));
 
         this.boardArray[row][column] = pressedKey;
 
@@ -159,12 +162,77 @@ class Crucigrama{
             selectedCell.attr("data-state","")
             alert("El elemento introducido no es valido para esta casilla.")
         }
-
+        
         if(this.check_win_condition()){
             this.end_time = new Date();
             var totalTime = this.calculate_date_difference();
 
             alert("Ha completado el crucigrama en: " + totalTime)
+            this.createRecordForm();
+        }
+    }
+
+   
+
+    createRecordForm(){
+        var article = $("<article></article>")
+
+        var h4=$("<h4></h4>")
+        h4.text("Formulario de records")
+
+        var form = $("<form></form>");
+        form.attr("action","#");
+        form.attr("method","post");
+        form.attr("name","record");
+
+        var nombre = $("<input/>")
+        nombre.attr("type","text");
+        nombre.attr("placeholder","Nombre")
+        nombre.attr("name","nombre");
+
+        var apellidos = $("<input/>")
+        apellidos.attr("type","text");
+        apellidos.attr("placeholder","Apellidos")
+        apellidos.attr("name","apellidos");
+
+        var nivel = $("<input/>")
+        nivel.attr("type","text");
+        nivel.attr("value",this.nivelString());
+        nivel.attr("readonly",true);
+        nivel.attr("name","nivel");
+
+        var tiempo = $("<input/>")
+        tiempo.attr("type","text");
+        tiempo.attr("value",this.totalSeconds + " segundos");
+        tiempo.attr("readonly",true);
+        tiempo.attr("name","tiempo");
+
+        var enviar = $("<input/>");
+        enviar.attr("type","submit");
+        enviar.attr("value","Enviar")
+
+        form.append(nombre)
+        form.append(apellidos)
+        form.append(nivel)
+        form.append(tiempo)
+        form.append(enviar)
+
+        article.append(h4);
+        article.append(form);
+
+        $("main").after(article)
+
+        
+    }
+
+    nivelString(){
+        switch (this.randomIndex){
+            case 0:
+                return "FÁCIL";
+            case 1:
+                return "INTERMEDIO"
+            case 2:
+                return "DIFICIL";        
         }
     }
 

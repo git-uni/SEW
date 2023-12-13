@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
-<polyline points="266.6666666666667, 0.0 426.6666666666667, 32.65306122448982 800.0, 277.55102040816325 " fill="none" stroke="blue" stroke-width="4" />
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="300">
+<polyline points="60.0, 63.7 96.0, 58.5 180.0, 19.5 " fill="red" stroke="blue" stroke-width="4" />
 </svg>

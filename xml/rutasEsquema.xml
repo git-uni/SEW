@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rutas 
-    xmlns="http://tempuri.org/rutas"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://tempuri.org/rutas rutas.xsd"
-    >
-	
-    <ruta>  
+<rutas xmlns="http://tempuri.org/rutas"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/rutas rutas.xsd">
+
+    <ruta>
         <nombre>Excursión de un Día a los Acantilados de Moher</nombre>
         <tipo> Senderismo </tipo>
         <transporte> A pie  </transporte>
@@ -30,11 +27,11 @@
             <referencia> https://en.wikipedia.org/wiki/County_Clare         </referencia>
         </referencias>
 
-		<notaRecomendacion> 8 </notaRecomendacion>
-		
+        <notaRecomendacion> 8 </notaRecomendacion>
+
         <hitos>
-			<hito>  
-				<nombre> O'Brien's Tower </nombre>
+            <hito>
+                <nombre> O'Brien's Tower </nombre>
 
                 <coordenadas>
                     <longitud>-9.4306</longitud>
@@ -44,10 +41,10 @@
 
                 <distancia unidades="km"> 2  </distancia>
 
-                <fotografias> 
+                <fotografias>
                     <foto> oBriensTower.png </foto>
                 </fotografias>
-			</hito>
+            </hito>
 
             <hito>
                 <nombre>Hag's Head</nombre>
@@ -73,11 +70,11 @@
                 <fotografias>
                     <foto>cliffsCafe.png</foto>
                 </fotografias>
-            </hito> 
+            </hito>
         </hitos>
     </ruta>
 
-    <ruta> 
+    <ruta>
         <nombre>Excursión a la Calzada del Gigante</nombre>
         <tipo> Senderismo y monumentos </tipo>
         <transporte> A pie y Tren </transporte>
@@ -101,29 +98,29 @@
             <referencia> https://www.nationaltrust.org.uk/visit/northern-ireland/giants-causeway </referencia>
             <referencia> https://whc.unesco.org/es/list/369                                      </referencia>
         </referencias>
-		
-		<notaRecomendacion> 6 </notaRecomendacion>
-		
+
+        <notaRecomendacion> 6 </notaRecomendacion>
+
         <hitos>
-			<hito>
-				<nombre> Giant's Causeway Viewpoint </nombre>
+            <hito>
+                <nombre> Giant's Causeway Viewpoint </nombre>
 
-				<coordenadas>
-					<longitud>-6.5103</longitud>
-					<latitud>55.2389</latitud>
-					<altitud>49</altitud>
-				</coordenadas>
+                <coordenadas>
+                    <longitud>-6.5103</longitud>
+                    <latitud>55.2389</latitud>
+                    <altitud>49</altitud>
+                </coordenadas>
 
-				<distancia unidades="km"> 5  </distancia>
+                <distancia unidades="km"> 5  </distancia>
 
-				<fotografias>
-					<foto> calzadaDelGigante.png </foto>
-				</fotografias>
+                <fotografias>
+                    <foto> calzadaDelGigante.png </foto>
+                </fotografias>
 
-				<videos>
-					<video> calzadaDelGigante.mp4</video>
-				</videos>
-			</hito>
+                <videos>
+                    <video> calzadaDelGigante.mp4</video>
+                </videos>
+            </hito>
 
             <hito>
                 <nombre>Centro de Visitantes de la Calzada del Gigante</nombre>
@@ -157,10 +154,10 @@
                 </videos>
             </hito>
 
-		</hitos>
+        </hitos>
     </ruta>
 
-    <ruta> 
+    <ruta>
         <nombre>Excursión al Parque Nacional de Wicklow</nombre>
         <tipo> Senderismo, Naturaleza y Monumentos </tipo>
         <transporte> A pie y Bus </transporte>
@@ -185,24 +182,24 @@
             <referencia> https://es.wikipedia.org/wiki/Montes_Wicklow                       </referencia>
         </referencias>
 
-		<notaRecomendacion> 9 </notaRecomendacion>
-		
+        <notaRecomendacion> 9 </notaRecomendacion>
+
         <hitos>
-			<hito>
-				 <nombre> Cascada de Powerscourt </nombre>
-				<coordenadas>
-					<longitud>-6.2111</longitud>
-					<latitud>53.1461</latitud>
-					<altitud>220</altitud>
-				</coordenadas>
+            <hito>
+                <nombre> Cascada de Powerscourt </nombre>
+                <coordenadas>
+                    <longitud>-6.2111</longitud>
+                    <latitud>53.1461</latitud>
+                    <altitud>220</altitud>
+                </coordenadas>
 
 
-				<distancia unidades="km"> 5  </distancia>
+                <distancia unidades="km"> 5  </distancia>
 
-            <fotografias> 
-                <foto> powerscourtCascada.png </foto>
-            </fotografias>
-			</hito>
+                <fotografias>
+                    <foto> powerscourtCascada.png </foto>
+                </fotografias>
+            </hito>
 
             <hito>
                 <nombre>Glendalough Upper Lake</nombre>
@@ -229,7 +226,7 @@
                     <foto>wicklowWayPaseo.png</foto>
                 </fotografias>
             </hito>
-           
+
 
         </hitos>
     </ruta>

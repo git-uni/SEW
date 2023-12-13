@@ -24,6 +24,7 @@ header nav a{
     margin: 0.6em;
 }
 
+/*Especificidad: 002*/
 header h1{
     align-self: center;
 }
