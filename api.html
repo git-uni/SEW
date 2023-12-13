@@ -66,7 +66,9 @@
             e.preventDefault();
             canvas.startPosition(e.touches[0]); });
         canvasElement.addEventListener('touchend', function () { canvas.endPosition(); });
-        canvasElement.addEventListener('touchmove', function (e) { canvas.draw(e.touches[0]); });
+        canvasElement.addEventListener('touchmove', function (e) { 
+            e.preventDefault();
+            canvas.draw(e.touches[0]); });
 
         window.addEventListener('resize', function () {
             canvasElement.width = canvasElement.offsetWidth;
