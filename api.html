@@ -62,7 +62,9 @@
         canvasElement.addEventListener('mousemove', function (e) { canvas.draw(e); })
         canvasElement.addEventListener('mouseleave', function () { canvas.endPosition(); });
 
-        canvasElement.addEventListener('touchstart', function (e) { canvas.startPosition(e.touches[0]); });
+        canvasElement.addEventListener('touchstart', function (e) { 
+            e.preventDefault();
+            canvas.startPosition(e.touches[0]); });
         canvasElement.addEventListener('touchend', function () { canvas.endPosition(); });
         canvasElement.addEventListener('touchmove', function (e) { canvas.draw(e.touches[0]); });
 
@@ -72,13 +74,10 @@
         });
 
 
-        canvasElement.addEventListener('dragover', function (e) {
-            e.preventDefault();
-        });
+        canvasElement.addEventListener('dragover', function (e) { e.preventDefault(); });
 
-        canvasElement.addEventListener('drop', function (e) {
+        canvasElement.addEventListener('drop', function (e) { 
             e.preventDefault();
-
             var file = e.dataTransfer.files[0];
             if (file) {
                 var reader = new FileReader();
