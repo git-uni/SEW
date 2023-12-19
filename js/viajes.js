@@ -161,39 +161,88 @@ class Viajes {
         var notaRecomendacion = $("<p></p>");
         notaRecomendacion.text("Nota recomendación: " + this.children[13].innerHTML);
 
-        var hitos = $("<pre></pre>");
+        var hitos = $("<article></article>");
         hitos.text("Hitos: ");
 
         var hito = $(this.children[14].children)
 
         hito.each(function () {
-          var fotografias = "\n Fotografias: "
-          var videos = "\n Videos: "
+          
+          
+          var nombre = $("<h6></h6>")
+          nombre.text("Nombre: " + this.children[0].innerText)
 
-          var nombre = "\n Nombre: " + this.children[0].innerText;
-
-          var coordenadas = "\n Coordenadas(long,lat,alt): " + this.children[1].children[0].innerText
+          var coordenadas = $("<p></p>")
+          coordenadas.text( "Coordenadas(long,lat,alt): " + this.children[1].children[0].innerText
             + ", " + this.children[1].children[1].innerText
-            + ", " + this.children[1].children[2].innerText;
+            + ", " + this.children[1].children[2].innerText)
 
-          var distancia = "\n Distancia: " + this.children[2].innerText + this.children[2].attributes[0].nodeValue
+          var distancia = $("<p></p>")  
+          distancia.text("Distancia: " + this.children[2].innerText + this.children[2].attributes[0].nodeValue)
 
+          var fotografias = $("<p></p>")  
+          fotografias.text("Fotografias: ")
 
+          hitos.append(nombre);
+          hitos.append(coordenadas);
+          hitos.append(distancia);
+          hitos.append(fotografias);
+          
+          var picture = $("<picture></picture>")
           var fotografia = $(this.children[3].children)
           fotografia.each(function () {
-            fotografias += "Foto: " + this.innerText + " "
-          })
+            var nombreFoto = this.innerText.trim().split(".")[0];
+            var sourceMovil = $("<source/>")
+            sourceMovil.attr("srcset","/multimedia/imagenes/" + nombreFoto + "_movil.png");
+            sourceMovil.attr("media","(max-width: 465px)");
 
-          if (this.children.length > 4) {
+            var sourceTablet = $("<source/>")
+            sourceTablet.attr("srcset","/multimedia/imagenes/" + nombreFoto + "_tablet.png");
+            sourceTablet.attr("media","(max-width: 799px)");
+
+            var img = $("<img/>")
+            img.attr("src","/multimedia/imagenes/" + nombreFoto + ".png");
+            img.attr("alt",nombreFoto);
+
+            picture.append(sourceMovil);
+            picture.append(sourceTablet);
+            picture.append(img);
+
+            hitos.append(picture);
+            
+          })
+          
+
+          var videos =  $("<p></p>") ;
+          videos.text("Videos: ");
+
+          hitos.append(videos);
+
+          if (this.children.length > 4) { // los videos son opcionales, no todas las rutas tienen
 
             var video = $(this.children[4].children)
             video.each(function () {
-              videos += "Video: " + this.innerText + " "
+              var nombreVideo = this.innerText.trim().split(".")[0];
+              
+              var videoElement = $("<video></video>")
+              videoElement.attr("controls",true);
+              videoElement.attr("preload","auto");
+
+              var sourceMp4 = $("<source/>")
+              sourceMp4.attr("src","/multimedia/videos/" + nombreVideo + ".mp4");
+              sourceMp4.attr("type","video/mp4");
+
+              var sourceWebM = $("<source/>")
+              sourceWebM.attr("src","/multimedia/videos/" + nombreVideo + ".webm");
+              sourceWebM.attr("type","video/webm");
+
+              videoElement.append(sourceMp4);
+              videoElement.append(sourceWebM);
+
+              hitos.append(videoElement)
+
             })
           }
-
-          hitos.text(hitos.text() + nombre + coordenadas + distancia + fotografias + videos + "\n")
-
 
         })
 
@@ -291,6 +340,11 @@ class Viajes {
       infoWindow.setPosition(event.latLng);
       infoWindow.open(mapaGeoposicionado);
     });
+
+    // Añadir encabezado a la section del mapa
+    var h3 = document.createElement("h3");
+    h3.textContent = "Mapa";
+    document.querySelector("body section:nth-of-type(3)").append(h3);
   }
 
   leerSVGs(files) {

@@ -44,6 +44,8 @@
         <p>  <a href="sudoku.html"> Sudoku</a>   </p>
         <p>  <a href="crucigrama.php"> Crucigrama</a>   </p>
         <p>  <a href="api.html"> Canvas interactivo </a>   </p>
+        <p>  <a href="/php/gestorPeliculas.php"> Gestor Peliculas </a>   </p>
+
 
     </section>
 
@@ -65,7 +67,22 @@
 
         <button>Borrar Canvas</button>
     </section>
+
     <button>Exportar Canvas</button>
+
+    <article>
+        <h3>Importar Canvas</h3>
+
+        <p> Puedes añadir contenido al lienzo de diferentes maneras:</p>
+
+        <ol>
+            <li>Arrastrando una imagen y soltándola en el canvas.</li>
+            <li>Haciendo clic en 'Seleccionar Archivo' y eligiendo una imagen para cargar en el canvas.</li>
+        </ol>
+
+        <p> <input type="file" accept="image/*" onchange="canvas.importCanvas(this.files[0])"  /> </p>
+
+    </article>
 
 
 
@@ -74,8 +91,7 @@
         var canvasElement = document.querySelector("canvas");
 
         //Ajustamos el tamaño del canvas
-        canvasElement.width = canvasElement.offsetWidth;
-        canvasElement.height = canvasElement.offsetHeight;
+        canvas.adjustCanvas();
 
         // Eventos ratón
         canvasElement.addEventListener('mousedown', function (e) { canvas.startPosition(e); })
@@ -95,42 +111,23 @@
 
         // Si la ventana cambia de tamaño, el canvas se reinicia y se ajusta su tamaño
         window.addEventListener('resize', function () {
-            canvasElement.width = canvasElement.offsetWidth;
-            canvasElement.height = canvasElement.offsetHeight;
+            canvas.adjustCanvas();
         });
 
 
-        //API Drag & Drop y File para "importar" canvas/imagenes
+        //API Drag & Drop  para "importar" canvas/imagenes
         canvasElement.addEventListener('dragover', function (e) { e.preventDefault(); });
 
         canvasElement.addEventListener('drop', function (e) { 
             e.preventDefault();
             var file = e.dataTransfer.files[0];
-            if (file) {
-                var reader = new FileReader();
-                reader.onload = function (event) {
-                    var img = new Image();
-                    img.onload = function () {
-                        canvasElement.getContext("2d").clearRect(0, 0, canvasElement.width, canvasElement.height);
-
-                        canvasElement.getContext("2d").drawImage(img, 0, 0);
-                    };
-                    img.src = event.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
+            canvas.importCanvas(file);
+           
         });
 
         // Botón para Exportar/Descargar la imagen del canvas
         var exportButton = document.querySelector("body > button");
-        exportButton.addEventListener('click', function () {
-            var dataURL = canvasElement.toDataURL('image/png');
-
-            var a = document.createElement('a');
-            a.href = dataURL;
-            a.download = 'canvas_image.png';
-            a.click();
-        });
+        exportButton.addEventListener('click', function () { canvas.exportCanvas(); });
 
         // Botón para limpiar el canvas 
         var clearButton = document.querySelector("section > button");

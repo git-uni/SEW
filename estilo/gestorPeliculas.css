@@ -1,0 +1,12 @@
+/* Daniel Uria Edroso UO282813 */
+
+/*Especificidad: 011*/
+input[type="submit"] {
+    background-color: #2F4F6F;
+    color: #FFF;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.5em;
+    margin-bottom: 0.3em;
+}

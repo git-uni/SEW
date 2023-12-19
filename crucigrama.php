@@ -147,6 +147,8 @@
         <p> <a href="sudoku.html"> Sudoku</a> </p>
         <p> <a href="crucigrama.php"> Crucigrama</a> </p>
         <p>  <a href="api.html"> Canvas interactivo </a>   </p>
+        <p>  <a href="/php/gestorPeliculas.php"> Gestor Peliculas </a>   </p>
+
 
 
     </section>

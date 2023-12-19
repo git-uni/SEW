@@ -1,77 +1,82 @@
 /* Daniel Uria Edroso UO282813 */
 
 /*Especificidad: 001*/
-main{
-   display: grid;
-   grid-template-columns: repeat(9, 1fr);
-   grid-template-rows: repeat(11, 1fr);
-   border: 0.2em solid #000;
-    
- }
+main {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  border: 0.2em solid #000;
 
- /*Especificidad: 002*/
- main p{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   border: 0.05em solid #000;
-   margin:0;
-   height: 3em;
- }
-
- /*Especificidad: 011*/
- p[data-state="empty"]{
-    background-color: #000;
-    margin:0;
- }
-
-  /*Especificidad: 011*/
-  p[data-state="clicked"]{
-    background-color: #B6CBE1 ;;
-   
- }
-
-
-  /*Especificidad:011*/
-  section[data-type=botonera] {
-    visibility: hidden;
 }
+
+/*Especificidad: 002*/
+main p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05em solid #000;
+  margin: 0;
+  height: 3em;
+}
+
+/*Especificidad: 011*/
+p[data-state="empty"] {
+  background-color: #000;
+  margin: 0;
+}
+
+/*Especificidad: 011*/
+p[data-state="clicked"] {
+  background-color: #B6CBE1;
+  ;
+
+}
+
+
+/*Especificidad:011*/
+section[data-type=botonera] {
+  visibility: hidden;
+}
+
 /*Especificidad:012*/
 section[data-type=botonera] h2 {
   visibility: hidden;
 }
+
 /*Especificidad:012*/
 section[data-type=botonera] button {
   visibility: hidden;
 }
 
- @media (max-width: 799px) {
+@media (max-width: 799px) {
 
   /*Especificidad:011*/
   section[data-type=botonera] {
-      visibility: visible;
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-  }
-  /*Especificidad:012*/
-  section[data-type=botonera] h2 {
-      visibility: visible;
-      width: 100%;
-      text-align: center;
-  }
-  /*Especificidad:012*/
-  section[data-type=botonera] button {
-      visibility: visible;
-      width: calc(15% - 1em);
-      height: 4em;
-      text-align: center;
-      background-color: #000;
-      color: #FFF;
+    visibility: visible;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
- 
+  /*Especificidad:012*/
+  section[data-type=botonera] h2 {
+    visibility: visible;
+    width: 100%;
+    text-align: center;
+  }
+
+  /*Especificidad:012*/
+  section[data-type=botonera] button {
+    visibility: visible;
+    width: calc(15% - 1em);
+    height: 4em;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+  }
+
+
 
 }

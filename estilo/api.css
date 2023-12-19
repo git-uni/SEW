@@ -68,6 +68,12 @@ section article h3 {
 section article button {
     flex-basis: 10%;
     height: 10vh;
-    margin: 0.2em;
+    margin-right: 0.3em;
     margin-bottom: 0.5em;
+}
+
+input[type="file"] {
+    border: 0.1vw solid #2F4F6F;
+    padding: 0.7vw;
+    cursor: pointer;
 }
