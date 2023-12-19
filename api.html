@@ -80,7 +80,10 @@
             <li>Haciendo clic en 'Seleccionar Archivo' y eligiendo una imagen para cargar en el canvas.</li>
         </ol>
 
-        <p> <input type="file" accept="image/*" onchange="canvas.importCanvas(this.files[0])"  /> </p>
+        <label for="importCanvas"> Importar Canvas</label>
+        <p> 
+            <input id="importCanvas" type="file" accept="image/*" onchange="canvas.importCanvas(this.files[0])"  />
+        </p>
 
     </article>
 
