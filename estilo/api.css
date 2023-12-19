@@ -26,7 +26,8 @@ button {
 /*Especificidad: 011*/
 button[data-name="red"] {
     background-color: #ff0000;
-    color: #FFF;
+    color: #000000;
+    font-weight: bold;
 }
 
 /*Especificidad: 011*/
