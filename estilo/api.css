@@ -72,6 +72,7 @@ section article button {
     margin-bottom: 0.5em;
 }
 
+/*Especificidad: 011*/
 input[type="file"] {
     border: 0.1vw solid #2F4F6F;
     padding: 0.7vw;
