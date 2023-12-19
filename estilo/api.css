@@ -44,7 +44,7 @@ button[data-name="green"] {
 /*Especificidad: 011*/
 button[data-name="yellow"] {
     background-color: #FFFF00;
-    color: #FFF;
+    color: #000000;
 }
 
 /*Especificidad: 011*/
