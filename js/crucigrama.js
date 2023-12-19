@@ -185,36 +185,66 @@ class Crucigrama{
         form.attr("method","post");
         form.attr("name","record");
 
+        var labelNombre=$("<label></label");
+        labelNombre.attr("for","nombre");
+        labelNombre.text("Nombre:");
+
         var nombre = $("<input/>")
         nombre.attr("type","text");
         nombre.attr("placeholder","Nombre")
         nombre.attr("name","nombre");
+        nombre.attr("id","nombre");
+
+        var labelApellidos=$("<label></label");
+        labelApellidos.attr("for","apellidos");
+        labelApellidos.text("Apellidos:")
 
         var apellidos = $("<input/>")
         apellidos.attr("type","text");
         apellidos.attr("placeholder","Apellidos")
         apellidos.attr("name","apellidos");
+        apellidos.attr("id","apellidos");
+
+
+        var labelNivel=$("<label></label");
+        labelNivel.attr("for","nivel");
+        labelNivel.text("Nivel:");
 
         var nivel = $("<input/>")
         nivel.attr("type","text");
         nivel.attr("value",this.nivelString());
         nivel.attr("readonly",true);
         nivel.attr("name","nivel");
+        nivel.attr("id","nivel");
+
+
+        var labelTiempo=$("<label></label");
+        labelTiempo.attr("for","tiempo");
+        labelTiempo.text("Tiempo:");
 
         var tiempo = $("<input/>")
         tiempo.attr("type","text");
         tiempo.attr("value",this.totalSeconds + " segundos");
         tiempo.attr("readonly",true);
         tiempo.attr("name","tiempo");
+        tiempo.attr("id","tiempo");
 
         var enviar = $("<input/>");
         enviar.attr("type","submit");
         enviar.attr("value","Enviar")
 
+        form.append(labelNombre);
         form.append(nombre)
+
+        form.append(labelApellidos);
         form.append(apellidos)
+
+        form.append(labelNivel);
         form.append(nivel)
+
+        form.append(labelTiempo);
         form.append(tiempo)
+        
         form.append(enviar)
 
         article.append(h4);
