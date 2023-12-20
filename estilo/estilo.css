@@ -125,6 +125,11 @@ section[data-name="meteo"]{
     flex-wrap:	wrap;
 }
 
+/*Especificidad:012*/
+section[data-name="meteo"] h4{
+   flex-basis: 100%;
+}
+
 /*Especificidad:011*/
 article[data-name="meteo"]{
     display: flex;
