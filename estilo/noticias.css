@@ -1,11 +1,11 @@
-/*Especificidad: 023*/
+/*Especificidad: 022*/
 section:nth-child(n) p:nth-child(4n){
     font-weight: bold;
     font-style: oblique;
     font-size: 1.2em;
 }
 
-/*Especificidad: 023 */
+/*Especificidad: 022 */
 section:nth-child(n) p:nth-child(2n){
     font-style: italic;
     font-size: 1.2em;
