@@ -165,7 +165,9 @@
 
     <h3> Procesado archivo XML </h3>
 
-    <p><input type="file" onchange="mapa.leerArchivo(this.files);"></p>
+    <label for ="inputXML"> Seleccionar archivo XML:</label>
+
+    <p><input id ="inputXML" type="file" onchange="mapa.leerArchivo(this.files);"></p>
 
     <section data-name="rutas">
         <h4>Rutas </h4>
@@ -174,12 +176,14 @@
 
     <h3> Procesado archivos planimetría </h3>
 
-    <p><input type="file"  onchange="mapa.leerKMLs(this.files);" multiple></p>
+    <label for ="inputKML"> Seleccionar archivos KML:</label>
+    <p><input id="inputKML" type="file"  onchange="mapa.leerKMLs(this.files);" multiple></p>
 
     
     <h3> Procesado archivos altimetría </h3>
 
-    <p><input type="file"  onchange="mapa.leerSVGs(this.files);" multiple></p>
+    <label for ="inputSVG"> Seleccionar archivos SVG:</label>
+    <p><input id="inputSVG" type="file"  onchange="mapa.leerSVGs(this.files);" multiple></p>
 
     <section data-name="altimetrias"> 
         <h4>Altimetrias</h4>
