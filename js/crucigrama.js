@@ -177,8 +177,8 @@ class Crucigrama{
     createRecordForm(){
         var article = $("<article></article>")
 
-        var h4=$("<h4></h4>")
-        h4.text("Formulario de records")
+        var h3=$("<h3></h3>")
+        h3.text("Formulario de records")
 
         var form = $("<form></form>");
         form.attr("action","#");
@@ -247,7 +247,7 @@ class Crucigrama{
         
         form.append(enviar)
 
-        article.append(h4);
+        article.append(h3);
         article.append(form);
 
         $("main").after(article)
