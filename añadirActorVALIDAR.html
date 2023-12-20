@@ -2,14 +2,14 @@
 <html lang="es"><head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8">
-    <title>EscritorioVirtual: Listado actores</title>
+    <title>EscritorioVirtual: Añadir Actor</title>
     <meta name="author" content="Daniel Uria">
-    <meta name="description" content="Listado con los actores que figuran en la BD">
-    <meta name="keywords" content="Lista, Actores, BD">
+    <meta name="description" content="Formulario para creacion de nuevo actor en BD">
+    <meta name="keywords" content="Añadir, Actores, BD">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
     <link rel="icon" href="multimedia/imagenes/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/estilo/layout.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
 
 </head>
 
@@ -41,31 +41,28 @@
 
     </section>
 
+    <main>
+        <h3> Formulario inserción de Actor</h3>
 
-        <article>
-       
-        <h3> Listado Actores </h3>
+        <form action="#" method="post" name="addActor">
+            <p><label for="dni"> DNI: </label></p>
+            <p><input id="dni" name="dni" type="text" placeholder="DNI"></p>
 
-        <ul>
+            <p><label for="nombre"> Nombre: </label></p>
+            <p><input id="nombre" name="nombre" type="text" placeholder="Nombre"></p>
 
-                            <li>
-                    DNI: A12345678, Nombre completo: Johnny Depp, Oscars: 1                </li>
-                            <li>
-                    DNI: B87654321, Nombre completo: Meryl Streep, Oscars: 3                </li>
-                            <li>
-                    DNI: C98765432, Nombre completo: Leonardo Dicaprio, Oscars: 1                </li>
-                            <li>
-                    DNI: D23456789, Nombre completo: Scarlett Johansson, Oscars: 0                </li>
-                            <li>
-                    DNI: E34567890, Nombre completo: Denzel Washington, Oscars: 2                </li>
-            
-        </ul>
+            <p><label for="apellidos"> Apellidos: </label></p>
+            <p><input id="apellidos" name="apellidos" type="text" placeholder="Apellidos"></p>
 
-    </article>
+            <p><label for="oscars"> Oscars: </label></p>
+            <p><input id="oscars" name="oscars" type="number" placeholder="Numero de oscars"></p>
+
+            <p><input type="submit" value="Añadir Actor"></p>
+        </form>
+
+    </main>
+
     
-    
-
-
 
 
 
