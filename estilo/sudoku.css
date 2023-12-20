@@ -1,91 +1,98 @@
 /* Daniel Uria Edroso UO282813 */
 
 /*Especificidad: 001*/
-main{
-   display: grid;
-   grid-template-columns: repeat(9, 1fr);
-   grid-template-rows: repeat(9, 1fr);
-   border: 0.2em solid #000;
-   width: 60vw;
-   height: 50vh;
- 
+main {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  border: 0.2em solid #000;
+  width: 60vw;
+  height: 50vh;
+
 }
 
 /*Especificidad: 002*/
-main p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-    border: 0.05em solid #808080;
+main p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0.05em solid #808080;
 }
 
 /*Especificidad: 012*/
-main p:nth-child(3n){
-    border-right: 0.1em solid #000;
-}
-/*Especificidad: 022*/
-main p:nth-child(n+19):nth-child(-n+27){
-    border-bottom: 0.1em solid #000;
-}
-/*Especificidad: 022*/
-main p:nth-child(n+46):nth-child(-n+54){
-    border-bottom: 0.1em solid #000;
+main p:nth-child(3n) {
+  border-right: 0.1em solid #000;
 }
 
-/*Especificidad: 011*/  
+/*Especificidad: 022*/
+main p:nth-child(n+19):nth-child(-n+27) {
+  border-bottom: 0.1em solid #000;
+}
+
+/*Especificidad: 022*/
+main p:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 0.1em solid #000;
+}
+
+/*Especificidad: 011*/
 p[data-state="blocked"] {
-    background-color: #FFFF; 
-    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
-  }  
-
-  p[data-state="clicked"] {
-    background-color: #B6CBE1 ;
-    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
-  }   
-
- /*Especificidad:011*/
- section[data-type=botonera] {
-    visibility: hidden;
+  background-color: #FFFF;
+  /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
 }
+
+/*Especificidad: 011*/
+p[data-state="clicked"] {
+  background-color: #B6CBE1;
+  /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
+}
+
+/*Especificidad:011*/
+section[data-type=botonera] {
+  visibility: hidden;
+}
+
 /*Especificidad:012*/
 section[data-type=botonera] h2 {
   visibility: hidden;
 }
+
 /*Especificidad:012*/
 section[data-type=botonera] button {
   visibility: hidden;
 }
 
- @media (max-width: 799px) {
+@media (max-width: 799px) {
 
   /*Especificidad:011*/
   section[data-type=botonera] {
-      visibility: visible;
-       /* Advertencia comprobada */
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+    visibility: visible;
+    /* Advertencia comprobada */
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
+
   /*Especificidad:012*/
   section[data-type=botonera] h2 {
-      visibility: visible;
-       /* Advertencia comprobada */
-      width: 100%;
-      text-align: center;
+    visibility: visible;
+    /* Advertencia comprobada */
+    width: 100%;
+    text-align: center;
   }
+
   /*Especificidad:012*/
   section[data-type=botonera] button {
-      visibility: visible;
-       /* Advertencia comprobada */
-      width: calc(15% - 1em);
-      height: 4em;
-      text-align: center;
-      background-color: #000;
-      color: #FFF;
+    visibility: visible;
+    /* Advertencia comprobada */
+    width: calc(15% - 1em);
+    height: 4em;
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
   }
-}  
+}

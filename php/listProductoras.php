@@ -11,7 +11,7 @@
     <meta name="keywords" content="Lista, Productoras, BD" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/estilo/estilo.css" />
-    <link rel="icon" href="multimedia/imagenes/favicon.ico" />
+    <link rel="icon" href="/multimedia/imagenes/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/estilo/layout.css" />
 
 </head>
