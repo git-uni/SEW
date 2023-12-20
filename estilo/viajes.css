@@ -67,7 +67,7 @@ body > article img {
     border-radius: 0.5em;
 }
 
-/*Especificidad: 002*/
+/*Especificidad: 001*/
 h5,h6{
   font-size: 1.2em;
 }
