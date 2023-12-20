@@ -38,10 +38,12 @@ main p:nth-child(n+46):nth-child(-n+54){
 /*Especificidad: 011*/  
 p[data-state="blocked"] {
     background-color: #FFFF; 
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
   }  
 
   p[data-state="clicked"] {
-    background-color: #B6CBE1 ;;
+    background-color: #B6CBE1 ;
+    /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
   }   
 
  /*Especificidad:011*/
@@ -62,6 +64,7 @@ section[data-type=botonera] button {
   /*Especificidad:011*/
   section[data-type=botonera] {
       visibility: visible;
+       /* Advertencia comprobada */
       display: flex;
       gap: 1em;
       justify-content: center;
@@ -71,12 +74,14 @@ section[data-type=botonera] button {
   /*Especificidad:012*/
   section[data-type=botonera] h2 {
       visibility: visible;
+       /* Advertencia comprobada */
       width: 100%;
       text-align: center;
   }
   /*Especificidad:012*/
   section[data-type=botonera] button {
       visibility: visible;
+       /* Advertencia comprobada */
       width: calc(15% - 1em);
       height: 4em;
       text-align: center;
