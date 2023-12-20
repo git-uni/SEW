@@ -132,4 +132,5 @@
          return $data;
      }
  }
+ $gestor = new Gestor();
 ?>

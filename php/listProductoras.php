@@ -69,6 +69,16 @@
     </article>
     <?php endif; ?>
 
+    <?php if (empty($productoras)): ?>
+    <article>
+       
+        <h3> Listado Productoras </h3>
+
+        <p> No hay productoras en la base de datos en estos momentos </p>
+
+    </article>
+    <?php endif; ?>
+
 
 
 

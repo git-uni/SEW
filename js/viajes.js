@@ -193,15 +193,15 @@ class Viajes {
           fotografia.each(function () {
             var nombreFoto = this.innerText.trim().split(".")[0];
             var sourceMovil = $("<source/>")
-            sourceMovil.attr("srcset","/multimedia/imagenes/" + nombreFoto + "_movil.png");
+            sourceMovil.attr("srcset","/xml/" + nombreFoto + "_movil.png");
             sourceMovil.attr("media","(max-width: 465px)");
 
             var sourceTablet = $("<source/>")
-            sourceTablet.attr("srcset","/multimedia/imagenes/" + nombreFoto + "_tablet.png");
+            sourceTablet.attr("srcset","/xml/" + nombreFoto + "_tablet.png");
             sourceTablet.attr("media","(max-width: 799px)");
 
             var img = $("<img/>")
-            img.attr("src","/multimedia/imagenes/" + nombreFoto + ".png");
+            img.attr("src","/xml/" + nombreFoto + ".png");
             img.attr("alt",nombreFoto);
 
             picture.append(sourceMovil);
@@ -229,11 +229,11 @@ class Viajes {
               videoElement.attr("preload","auto");
 
               var sourceMp4 = $("<source/>")
-              sourceMp4.attr("src","/multimedia/videos/" + nombreVideo + ".mp4");
+              sourceMp4.attr("src","/xml/" + nombreVideo + ".mp4");
               sourceMp4.attr("type","video/mp4");
 
               var sourceWebM = $("<source/>")
-              sourceWebM.attr("src","/multimedia/videos/" + nombreVideo + ".webm");
+              sourceWebM.attr("src","/xml/" + nombreVideo + ".webm");
               sourceWebM.attr("type","video/webm");
 
               videoElement.append(sourceMp4);

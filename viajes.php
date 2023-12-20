@@ -155,6 +155,7 @@
 
     <h3> Mapa Dinámico </h3>
     <section id="dinamico">
+        <h4>Mapa</h4>
         
     </section>
 

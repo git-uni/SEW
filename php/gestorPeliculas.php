@@ -20,12 +20,11 @@
 <body>
     <?php
     include("gestor.php");
-    $gestor = new Gestor();
     if (count($_POST) > 0) {
         if (isset($_POST['resetButton'])) {
             $gestor->resetBD();
         }
-        
+
         if (isset($_POST['actorExportButton'])) {
             $gestor->export("actor");
         }
@@ -48,10 +47,19 @@
     }
 
 
+    $importErrorMessage=false;
     if ($_FILES) {
         $csvFilePath = $_FILES['csv_file']['tmp_name'];
-        $gestor->importFromCSV($csvFilePath);
+       
+        try{
+            $gestor->importFromCSV($csvFilePath);
+        }
+        catch (mysqli_sql_exception $e) {
+            $importErrorMessage = true;
+        }
     }
+
+    
     ?>
     <!-- Datos con el contenido que aparece en el navegador -->
     <header>
@@ -90,14 +98,21 @@
     <article>
         <h3>Importar información desde CSV</h3>
 
-        <p> 
-            IMPORTANTE: Para importar información de tablas con registros que contengan claves foráneas, se deberan importar primero dichos registros
+        <p>
+            IMPORTANTE: Para importar información de tablas con registros que contengan claves foráneas, se deberan
+            importar primero dichos registros
         </p>
 
         <form action="#" method="post" name="import" enctype="multipart/form-data">
             <input type="file" name="csv_file" />
             <input type="submit" value="Importar" />
         </form>
+
+        <?php 
+        if ($importErrorMessage) {
+            echo " <p> ERROR al importar datos </p>";
+        }
+         ?>
 
     </article>
 
@@ -149,27 +164,53 @@
 
         <ul>
             <li>
-                <a href="/php/listActors.php"> Listar Actores</a>
+                <a href="/php/listActors.php"> Lista Actores</a>
             </li>
 
             <li>
-                <a href="/php/listContratos.php"> Listar Contratos</a>
+                <a href="/php/listContratos.php"> Lista Contratos</a>
             </li>
 
             <li>
-                <a href="/php/listCriticas.php"> Listar Criticas</a>
+                <a href="/php/listCriticas.php"> Lista Criticas</a>
             </li>
 
             <li>
-                <a href="/php/listPeliculas.php"> Listar Peliculas</a>
+                <a href="/php/listPeliculas.php"> Lista Peliculas</a>
             </li>
 
             <li>
-                <a href="/php/listProductoras.php"> Listar Productoras</a>
+                <a href="/php/listProductoras.php"> Lista Productoras</a>
             </li>
         </ul>
     </section>
 
+    <section>
+        <h3> Añadir Información</h3>
+
+        <ul>
+            <li>
+                <a href="/php/addActor.php"> Añadir Actor</a>
+            </li>
+
+            <li>
+                <a href="/php/addContrato.php"> Añadir Contrato</a>
+            </li>
+
+            <li>
+                <a href="/php/addCritica.php"> Añadir Critica</a>
+            </li>
+
+            <li>
+                <a href="/php/addPelicula.php"> Añadir Pelicula</a>
+            </li>
+
+            <li>
+                <a href="/php/addProductora.php"> Añadir Productora</a>
+            </li>
+        </ul>
+
+    </section>
 
 
 

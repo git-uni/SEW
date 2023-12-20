@@ -69,6 +69,16 @@
     </article>
     <?php endif; ?>
 
+    <?php if (empty($contratos)): ?>
+    <article>
+       
+        <h3> Listado Contratos </h3>
+
+        <p> No hay contratos en la base de datos en estos momentos </p>
+
+    </article>
+    <?php endif; ?>
+
 
 
 

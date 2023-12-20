@@ -69,6 +69,17 @@
     </article>
     <?php endif; ?>
 
+    <?php if (empty($actores)): ?>
+    <article>
+       
+        <h3> Listado Actores </h3>
+
+        <p> No hay actores en la base de datos en estos momentos </p>
+
+    </article>
+    <?php endif; ?>
+
+
 
 
 

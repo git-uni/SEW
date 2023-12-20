@@ -22,14 +22,14 @@ main p {
 /*Especificidad: 011*/
 p[data-state="empty"] {
   background-color: #000;
+   /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
   margin: 0;
 }
 
 /*Especificidad: 011*/
 p[data-state="clicked"] {
   background-color: #B6CBE1;
-  ;
-
+  /* Advertencia de color: el elemento hereda la propiedad color del elemento body */
 }
 
 
@@ -53,6 +53,7 @@ section[data-type=botonera] button {
   /*Especificidad:011*/
   section[data-type=botonera] {
     visibility: visible;
+    /* Advertencia comprobada y necesaria*/
     display: flex;
     gap: 1em;
     justify-content: center;
@@ -63,6 +64,7 @@ section[data-type=botonera] button {
   /*Especificidad:012*/
   section[data-type=botonera] h2 {
     visibility: visible;
+    /* Advertencia comprobada y necesaria*/
     width: 100%;
     text-align: center;
   }
@@ -70,6 +72,7 @@ section[data-type=botonera] button {
   /*Especificidad:012*/
   section[data-type=botonera] button {
     visibility: visible;
+    /* Advertencia comprobada y necesaria*/
     width: calc(15% - 1em);
     height: 4em;
     text-align: center;

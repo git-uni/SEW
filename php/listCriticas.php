@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <?php 
+    <?php
     require("gestor.php");
     $gestor = new Gestor();
 
@@ -52,21 +52,32 @@
 
 
     <?php if (!empty($criticas)): ?>
-    <article>
-       
-        <h3> Listado Criticas </h3>
+        <article>
 
-        <ul>
+            <h3> Listado Criticas </h3>
 
-            <?php foreach ($criticas as $critica): ?>
-                <li>
-                    <?php echo "ID: " . $critica["id"] . ", Puntuacion: " . $critica["puntuacion"] . ", Comentario:  " . $critica["comentario"] . ", Pelicula: " .  $critica["nombrePelicula"] ?>
-                </li>
-            <?php endforeach; ?>
+            <ul>
 
-        </ul>
+                <?php foreach ($criticas as $critica): ?>
+                    <li>
+                        <?php echo "ID: " . $critica["id"] . ", Puntuacion: " . $critica["puntuacion"] . ", Comentario:  " . $critica["comentario"] . ", Pelicula: " . $critica["nombrePelicula"] ?>
+                    </li>
+                <?php endforeach; ?>
 
-    </article>
+            </ul>
+
+        </article>
+    <?php endif; ?>
+
+
+    <?php if (empty($criticas)): ?>
+        <article>
+
+            <h3> Listado Criticas </h3>
+
+            <p> No hay criticas en la base de datos en estos momentos </p>
+
+        </article>
     <?php endif; ?>
 
 

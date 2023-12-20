@@ -69,6 +69,16 @@
     </article>
     <?php endif; ?>
 
+    <?php if (empty($peliculas)): ?>
+    <article>
+       
+        <h3> Listado Peliculas </h3>
+
+        <p> No hay peliculas en la base de datos en estos momentos </p>
+
+    </article>
+    <?php endif; ?>
+
 
 
 
