@@ -53,7 +53,7 @@ section[data-type=botonera] button {
   /*Especificidad:011*/
   section[data-type=botonera] {
     visibility: visible;
-    /* Advertencia comprobada y necesaria*/
+    /* Advertencia comprobada */
     display: flex;
     gap: 1em;
     justify-content: center;
@@ -64,7 +64,7 @@ section[data-type=botonera] button {
   /*Especificidad:012*/
   section[data-type=botonera] h2 {
     visibility: visible;
-    /* Advertencia comprobada y necesaria*/
+    /* Advertencia comprobada */
     width: 100%;
     text-align: center;
   }
@@ -72,7 +72,7 @@ section[data-type=botonera] button {
   /*Especificidad:012*/
   section[data-type=botonera] button {
     visibility: visible;
-    /* Advertencia comprobada y necesaria*/
+    /* Advertencia comprobada */
     width: calc(15% - 1em);
     height: 4em;
     text-align: center;
