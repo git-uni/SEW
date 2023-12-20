@@ -36,8 +36,8 @@ class Sudoku{
                 if(parseInt(elemento) == 0){
                     var p = document.createElement("p");
                     p.addEventListener("click", this.setClicked.bind(this,p) );
-                    p.setAttribute("row",i);
-                    p.setAttribute("column",j);
+                    p.setAttribute("data-row",i);
+                    p.setAttribute("data-column",j);
 
                 }else{
                     var p = document.createElement("p");
@@ -68,8 +68,8 @@ class Sudoku{
 
     introduceNumber(pressedKey){
         var selectedCell = document.querySelector('p[data-state="clicked"]');
-        var row = selectedCell.getAttribute("row");
-        var column = selectedCell.getAttribute("column");
+        var row = selectedCell.getAttribute("data-row");
+        var column = selectedCell.getAttribute("data-column");
 
         if (this.isValidPlacement(row, column, pressedKey)) {
             selectedCell.removeEventListener('click', this.setClicked);
